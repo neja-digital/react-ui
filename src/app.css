@@ -1,0 +1,32 @@
+.demo-title {
+  text-align: center;
+}
+
+.demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+
+    .prop-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 8px;
+
+      label {
+        text-align: right;
+      }
+    }
+
+    &.button-demo .nj-button,
+    &.input-demo .nj-input,
+    &.textarea-demo .nj-textarea {
+      margin: 16px auto;
+    }
+  }
+}
