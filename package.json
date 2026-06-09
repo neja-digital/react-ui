@@ -6,6 +6,9 @@
   "exports": {
     ".": {
       "import": "./dist/index.js"
+    },
+    "./react-ui.css": {
+      "default": "./dist/react-ui.css"
     }
   },
   "files": [
