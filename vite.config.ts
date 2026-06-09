@@ -1,4 +1,4 @@
-import { defineConfig, esmExternalRequirePlugin } from 'vite'
+import { defineConfig } from 'vite'
 import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 import dts from 'vite-plugin-dts'
@@ -20,18 +20,12 @@ export default defineConfig({
     emptyOutDir: true,
     lib: {
       entry: resolve(import.meta.dirname, 'src/index.ts'),
-      name: 'NJ Digital React UI',
-      formats: ['es'],
-      fileName: 'index.es',
+      name: 'NJReactUI',
+      fileName: 'index',
     },
 
     rolldownOptions: {
-      // external: ['react', 'react-dom'],
-      plugins: [
-        esmExternalRequirePlugin({
-          external: [/^react(-dom)?(\/.+)?$/],
-        }),
-      ],
+      external: ['react', 'react-dom'],
     },
   },
 })
