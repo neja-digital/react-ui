@@ -1,6 +1,5 @@
 {
   "name": "@neja-digital/react-ui",
-  "private": true,
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.es.js",
@@ -12,14 +11,10 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": [
-    "dist/index.es.js",
-    "dist/index.d.ts",
-    "dist/index.es.css"
-  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc -b",
+    "prepare": "vite build && tsc -b",
     "lint": "eslint .",
     "preview": "vite preview"
   },
