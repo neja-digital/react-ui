@@ -16,7 +16,7 @@
     "build": "vite build && tsc -b",
     "lint": "eslint .",
     "preview": "vite preview",
-    "postinstall": "pnpm build"
+    "prepare": "pnpm i && pnpm build"
   },
   "dependencies": {
     "@neja-digital/css": "github:twitchysloth20/neja-digital-css#master"
