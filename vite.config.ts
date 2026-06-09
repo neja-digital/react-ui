@@ -1,7 +1,8 @@
-import { defineConfig, esmExternalRequirePlugin } from 'vite'
+import { defineConfig } from 'vite'
 import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 import dts from 'vite-plugin-dts'
+import { resolve } from 'node:path'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,30 +12,22 @@ export default defineConfig({
     dts({
       entryRoot: 'src',
       outDirs: 'dist',
-      tsconfigPath: './tsconfig.app.json',
+      // tsconfigPath: './tsconfig.app.json',
+      include: ['src'],
+      insertTypesEntry: true,
     }),
   ],
   build: {
+    emptyOutDir: true,
     lib: {
-      name: 'NJ Design System',
-      entry: './src/index.ts',
+      entry: resolve(import.meta.dirname, 'src/index.ts'),
+      name: 'NJ Digital React UI',
       formats: ['es'],
       fileName: 'index.es',
     },
 
-    // rollupOptions: {
-    //   external: ['react', 'react-dom', 'react/jsx-runtime'],
-    // },
-
-    cssCodeSplit: false,
-
     rolldownOptions: {
-      // external: [/^react(-dom)?(\/.+)?$/],
-      plugins: [
-        esmExternalRequirePlugin({
-          external: [/^react(-dom)?(\/.+)?$/],
-        }),
-      ],
+      external: ['react', 'react-dom'],
     },
   },
 })
