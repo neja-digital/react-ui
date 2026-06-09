@@ -6,6 +6,9 @@ import { resolve } from 'node:path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    esmExternalRequirePlugin({
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
+    }),
     react(),
     dts({
       tsconfigPath: './tsconfig.app.json',
