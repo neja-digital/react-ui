@@ -8,9 +8,6 @@ import { resolve } from 'node:path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    esmExternalRequirePlugin({
-      external: ['react'],
-    }),
     react(),
     babel({ presets: [reactCompilerPreset()] }),
     dts({
@@ -30,7 +27,12 @@ export default defineConfig({
     },
 
     rolldownOptions: {
-      external: ['react', 'react-dom'],
+      // external: ['react', 'react-dom'],
+      plugins: [
+        esmExternalRequirePlugin({
+          external: [/^react(-dom)?(\/.+)?$/],
+        }),
+      ],
     },
   },
 })
