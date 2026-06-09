@@ -10,10 +10,8 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] }),
     dts({
-      entryRoot: 'src',
-      outDirs: 'dist',
-      include: ['src'],
-      insertTypesEntry: true,
+      tsconfigPath: './tsconfig.app.json',
+      bundleTypes: true,
     }),
   ],
   build: {

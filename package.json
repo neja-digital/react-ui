@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "pnpm build"
@@ -31,6 +31,7 @@
   "devDependencies": {
     "@babel/core": "^7.29.0",
     "@eslint/js": "^10.0.1",
+    "@microsoft/api-extractor": "^7.58.8",
     "@rolldown/plugin-babel": "^0.2.3",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/babel__core": "^7.20.5",
