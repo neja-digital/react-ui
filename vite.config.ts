@@ -25,7 +25,7 @@ export default defineConfig({
       // external: ['react', 'react-dom'],
       plugins: [
         esmExternalRequirePlugin({
-          external: [/^react(-dom)?(\/.+)?$/],
+          external: ['react', 'react-dom', 'react/jsx-runtime'],
         }),
       ],
     },
