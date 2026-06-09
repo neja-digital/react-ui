@@ -1,4 +1,5 @@
-import { defineConfig, esmExternalRequirePlugin } from 'vite'
+import { defineConfig } from 'vite'
+import { esmExternalRequirePlugin } from 'rolldown/plugins'
 import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 import dts from 'vite-plugin-dts'
@@ -15,7 +16,6 @@ export default defineConfig({
     dts({
       entryRoot: 'src',
       outDirs: 'dist',
-      // tsconfigPath: './tsconfig.app.json',
       include: ['src'],
       insertTypesEntry: true,
     }),

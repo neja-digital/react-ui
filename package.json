@@ -9,7 +9,9 @@
     },
     "./react-ui.css": "./dist/index.es.css"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -42,6 +44,7 @@
     "globals": "^17.6.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "rolldown": "^1.1.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
     "vite": "^8.0.16",
