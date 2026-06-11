@@ -29,8 +29,8 @@ export default function NJHeroSection1({
 	const positionClass = njContentPos ? `position-${njContentPos}` : 'position-center'
 	const overlayClass = !njOverlay ? '' : njOverlay > 0 ? 'overlay-light' : 'overlay-dark'
 
-	const classname = classnames('nj-hero', positionClass)
-	const classnameOverlay = classnames('nj-hero__overlay', overlayClass)
+	const sectionClassname = classnames('nj-hero', positionClass)
+	const overlayClassname = classnames('nj-hero__overlay', overlayClass)
 
 	const headlineJsx = () => (
 		<h2 className="nj-hero__headline">
@@ -57,10 +57,10 @@ export default function NJHeroSection1({
 	)
 
 	return (
-		<section className={classname} style={styleObj as React.CSSProperties}>
+		<section className={sectionClassname} style={styleObj as React.CSSProperties}>
 			{
 				njOverlay &&
-        <div className={classnameOverlay}></div> }
+        <div className={overlayClassname}></div> }
 			{
 				children &&
         <div className="nj-hero__content">
