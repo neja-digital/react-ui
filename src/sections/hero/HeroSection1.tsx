@@ -31,17 +31,17 @@ export default function NJHeroSection1({
 	const positionClass = njContentPos ? `position-${njContentPos}` : 'position-center'
 	const overlayClass = !njOverlay ? '' : njOverlay > 0 ? 'overlay-light' : 'overlay-dark'
 
-	const classname = classnames('hero', positionClass)
-	const classnameOverlay = classnames('hero__overlay', overlayClass)
+	const classname = classnames('nj-hero', positionClass)
+	const classnameOverlay = classnames('nj-hero__overlay', overlayClass)
 
 	const headlineJsx = () => (
-		<h2 className="hero__headline">
+		<h2 className="nj-hero__headline">
 			{ njHeadline }
 		</h2>
 	)
 
 	const subheadlineJsx = () => (
-		<h3 className="hero__subheadline">
+		<h3 className="nj-hero__subheadline">
 			{ njSubheadline }
 		</h3>
 	)
@@ -59,7 +59,7 @@ export default function NJHeroSection1({
 	)
 
 	const supportingJsx = () => (
-		<p className="hero__supporting">
+		<p className="nj-hero__supporting">
 			{ njSupporting }
 		</p>
 	)
@@ -71,18 +71,18 @@ export default function NJHeroSection1({
         <div className={classnameOverlay}></div> }
 			{
 				children &&
-        <div className="hero__content">
+        <div className="nj-hero__content">
         	{children}
         </div>
 			}
 			{
 				!children &&
-				<div className="hero__content">
+				<div className="nj-hero__content">
 					{ njHeadline && headlineJsx() }
 					{ njSubheadline && subheadlineJsx() }
 					{
 						(njCtaPrimary || njCtaSecondary) &&
-					<div className="hero__cta-buttons">
+					<div className="nj-hero__cta-buttons">
 						{ njCtaSecondary && ctaSecondaryJsx() }
 						{ njCtaPrimary && ctaPrimaryJsx() }
 					</div>
