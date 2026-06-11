@@ -1,7 +1,7 @@
 export const keyToCssVariable = (str: string) => {
-  return `--${str}`
+	return `--${str}`
 }
 
 export const mapStringListToOptions = (list: string[]) => {
-  return list.map(s => <option key={s} value={s}>{s}</option>)
+	return list.map(s => <option key={s} value={s}>{s}</option>)
 }

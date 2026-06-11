@@ -1,3 +1,3 @@
 export type TNJTheme = {
-  colors: Record<string, string>
+	colors: Record<string, string>
 }

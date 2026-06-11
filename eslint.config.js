@@ -14,7 +14,7 @@ export default defineConfig([
       js.configs.recommended,
       tseslint.configs.recommended,
       reactHooks.configs.flat.recommended,
-      // reactRefresh.configs.vite,
+      reactRefresh.configs.vite,
     ],
     languageOptions: {
       globals: globals.browser,
@@ -23,9 +23,24 @@ export default defineConfig([
       '@stylistic': stylistic,
     },
     rules: {
-      '@stylistic/quotes': ['error', 'single'],
-      '@stylistic/comma-dangle': ['error', 'always-multiline'],
-      '@typescript-eslint/no-explicit-any': ['warn'],
-    }
+      "@stylistic/quotes": ["error", "single"],
+      "@stylistic/comma-dangle": ["error", "always-multiline"],
+      "@stylistic/max-len": ["error", {
+        "code": 120,
+      }],
+      "@stylistic/indent": ["error", "tab"],
+      "@stylistic/no-multiple-empty-lines": ["error", {
+        "max": 1,
+      }],
+      "@stylistic/jsx-max-props-per-line": ["error", {
+        "maximum": {
+          "single": 3,
+          "multi": 1
+        } 
+      }],
+      "@stylistic/jsx-quotes": ["error", "prefer-double"],
+      "@stylistic/semi": ["error", "never"],
+      "@typescript-eslint/no-explicit-any": ["warn"],
+    },
   },
 ])
