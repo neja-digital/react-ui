@@ -2,7 +2,7 @@ import { NJButton } from '@/components'
 import type { INJHeroProps } from '@/types/props'
 import classnames from 'classnames'
 
-export default function HeroSection1({
+export default function NJHeroSection1({
 	children,
 	njBackground,
 	njContentPos,
