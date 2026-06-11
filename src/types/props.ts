@@ -32,6 +32,5 @@ export interface INJHeroProps {
 	njHeadline?: string
 	njSubheadline?: string
 	njSupporting?: string
-	njCtaPrimary?: string
-	njCtaSecondary?: string
+	njCtaButtons?: React.ReactNode
 }

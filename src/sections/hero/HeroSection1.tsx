@@ -1,4 +1,3 @@
-import { NJButton } from '@/components'
 import type { INJHeroProps } from '@/types/props'
 import classnames from 'classnames'
 
@@ -11,8 +10,7 @@ export default function NJHeroSection1({
 	njHeadline,
 	njSubheadline,
 	njSupporting,
-	njCtaPrimary,
-	njCtaSecondary,
+	njCtaButtons,
 }: INJHeroProps) {
 	const backgrounds: Record<string, string> = {}
 
@@ -46,16 +44,10 @@ export default function NJHeroSection1({
 		</h3>
 	)
 
-	const ctaSecondaryJsx = () => (
-		<NJButton njColor="secondary" njVariant="solid">
-			{ njCtaSecondary }
-		</NJButton>
-	)
-
-	const ctaPrimaryJsx = () => (
-		<NJButton njColor="primary" njVariant="solid">
-			{ njCtaPrimary }
-		</NJButton>
+	const ctaButtonsJsx = () => (
+		<div className="nj-hero__cta-buttons">
+			{ njCtaButtons }
+		</div>
 	)
 
 	const supportingJsx = () => (
@@ -80,13 +72,7 @@ export default function NJHeroSection1({
 				<div className="nj-hero__content">
 					{ njHeadline && headlineJsx() }
 					{ njSubheadline && subheadlineJsx() }
-					{
-						(njCtaPrimary || njCtaSecondary) &&
-					<div className="nj-hero__cta-buttons">
-						{ njCtaSecondary && ctaSecondaryJsx() }
-						{ njCtaPrimary && ctaPrimaryJsx() }
-					</div>
-					}
+					{ njCtaButtons && ctaButtonsJsx() }
 					{ njSupporting && supportingJsx() }
 				</div>
 			}
