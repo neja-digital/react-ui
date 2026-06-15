@@ -23,7 +23,7 @@ jobs:
       
       - name: Configure npm auth for GitHub Packages
         run: |
-          printf "%s\n" "//npm.pkg.github.com/:\_authToken=\${{ secrets.NPM\_TOKEN }}" "@neja-digital:registry=https://npm.pkg.github.com/" > ~/.npmrc
+          printf "%s\n" "//npm.pkg.github.com/:_authToken=\${{ secrets.NPM_TOKEN }}" "@neja-digital:registry=https://npm.pkg.github.com/" > ~/.npmrc
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
