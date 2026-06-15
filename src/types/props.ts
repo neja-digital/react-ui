@@ -1,3 +1,5 @@
+/* ------ Basic / Multipurpose props ------ */
+
 export type TNJSizeProp = 'tight' | 'compact' | 'regular' | 'large' | 'xlarge'
 export type TNJTextSizeProp = 'tiny' | 'small' | 'regular' | 'large' | 'xlarge'
 export type TNJVariantProp = 'light' | 'solid'
@@ -13,6 +15,8 @@ export interface INJBasicProps {
 	njRounded?: TNJRoundedProp
 	njBorder?: TNJBorderProp
 }
+
+/* ------ Hero section props ------ */
 
 export interface INJHeroBackground {
 	mobileBg?: string,
@@ -33,4 +37,23 @@ export interface INJHeroProps {
 	njSubheadline?: string
 	njSupporting?: string
 	njCtaButtons?: React.ReactNode
+}
+
+/* ------ About section props ------ */
+
+export interface INJAboutImageProp {
+	srcSet: string
+	sizes: string
+	src: string
+	alt: string
+}
+
+export type TNJAboutImagePositionProp = 'left' | 'right'
+
+export interface INJAboutProps {
+	children?: React.ReactNode
+	njImgData?: INJAboutImageProp
+	njImgPos?: TNJAboutImagePositionProp
+	njAboutTitle?: string
+	njAboutContent?: React.ReactNode
 }
