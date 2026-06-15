@@ -1,6 +1,6 @@
 {
   "name": "@neja-digital/react-ui",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "module": "./dist/index.js",
   "exports": {
@@ -22,7 +22,7 @@
     "prepare": "pnpm build"
   },
   "dependencies": {
-    "@neja-digital/css": "github:twitchysloth20/neja-digital-css#section/about"
+    "@neja-digital/css": "0.1.0"
   },
   "peerDependencies": {
     "react": "^19.2.6",
