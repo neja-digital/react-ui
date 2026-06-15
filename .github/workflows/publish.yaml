@@ -15,9 +15,20 @@ jobs:
           node-version: 18
           registry-url: https://npm.pkg.github.com/
           scope: '@neja-digital'
+
+      - name: Enable Corepack & install pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
       - name: Build
-        run: npm ci && npm run build --if-present
+        run: pnpm run build --if-present
+
       - name: Publish package
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --registry=https://npm.pkg.github.com
+          NODE\_AUTH\_TOKEN: \${{ secrets.NPM\_TOKEN }}
+        run: pnpm publish --registry=https://npm.pkg.github.com
+
