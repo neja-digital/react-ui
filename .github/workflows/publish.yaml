@@ -29,6 +29,6 @@ jobs:
 
       - name: Publish package
         env:
-          NODE\_AUTH\_TOKEN: \${{ secrets.NPM\_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm publish --registry=https://npm.pkg.github.com
 
