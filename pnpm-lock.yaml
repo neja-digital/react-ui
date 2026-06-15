@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@neja-digital/css':
-        specifier: github:twitchysloth20/neja-digital-css#master
-        version: https://codeload.github.com/twitchysloth20/neja-digital-css/tar.gz/2d8216d5114fd153071a93dbf44e75f63c4a081e
+        specifier: github:twitchysloth20/neja-digital-css#section/about
+        version: https://codeload.github.com/twitchysloth20/neja-digital-css/tar.gz/616a0382f5a264616f294ea44265fbc1910a495c
     devDependencies:
       '@babel/core':
         specifier: ^7.29.0
@@ -251,8 +251,8 @@ packages:
       '@emnapi/core': ^1.7.1
       '@emnapi/runtime': ^1.7.1
 
-  '@neja-digital/css@https://codeload.github.com/twitchysloth20/neja-digital-css/tar.gz/2d8216d5114fd153071a93dbf44e75f63c4a081e':
-    resolution: {gitHosted: true, integrity: sha512-pwf4OZw6KHPwb0QnYbSzLeLnfn6IWI9vKNPL2en9PhwP4gV5w2Q28pdjTy/SKM98BUzgYYXdpgl+Pf8oSd0nBw==, tarball: https://codeload.github.com/twitchysloth20/neja-digital-css/tar.gz/2d8216d5114fd153071a93dbf44e75f63c4a081e}
+  '@neja-digital/css@https://codeload.github.com/twitchysloth20/neja-digital-css/tar.gz/616a0382f5a264616f294ea44265fbc1910a495c':
+    resolution: {tarball: https://codeload.github.com/twitchysloth20/neja-digital-css/tar.gz/616a0382f5a264616f294ea44265fbc1910a495c}
     version: 0.0.1
 
   '@oxc-project/types@0.133.0':
@@ -1515,7 +1515,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.2
     optional: true
 
-  '@neja-digital/css@https://codeload.github.com/twitchysloth20/neja-digital-css/tar.gz/2d8216d5114fd153071a93dbf44e75f63c4a081e': {}
+  '@neja-digital/css@https://codeload.github.com/twitchysloth20/neja-digital-css/tar.gz/616a0382f5a264616f294ea44265fbc1910a495c': {}
 
   '@oxc-project/types@0.133.0': {}
 

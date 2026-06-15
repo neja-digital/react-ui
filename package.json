@@ -22,7 +22,7 @@
     "prepare": "pnpm build"
   },
   "dependencies": {
-    "@neja-digital/css": "github:twitchysloth20/neja-digital-css#master"
+    "@neja-digital/css": "github:twitchysloth20/neja-digital-css#section/about"
   },
   "peerDependencies": {
     "react": "^19.2.6",
