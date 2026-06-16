@@ -1,6 +1,5 @@
 import type { INJImageProp, INJBasicProps, TNJRaisedProp } from '@neja-digital/react-ui'
 import classnames from 'classnames'
-import '/src/assets/card.css'
 
 export interface INJCardProps extends INJBasicProps {
 	children?: React.ReactNode
