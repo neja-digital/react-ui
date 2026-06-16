@@ -1,4 +1,4 @@
-import type { INJCardProps } from '@neja-digital/react-ui'
+import type { INJCardProps } from '@/types'
 import classnames from 'classnames'
 
 export default function NJCard({

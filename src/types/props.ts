@@ -78,3 +78,12 @@ export interface INJCardProps extends INJBasicProps {
 	njColor?: string
 	njRaised?: TNJRaisedProp
 }
+
+/* ------ Featured section props ------ */
+
+export interface INJFeaturedProps {
+	children?: React.ReactNode
+	njTitle?: string
+	njFeaturedItems?: INJCardProps[]
+	njCtaButtons?: React.ReactNode
+}
