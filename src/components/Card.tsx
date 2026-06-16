@@ -1,15 +1,5 @@
-import type { INJImageProp, INJBasicProps, TNJRaisedProp } from '@neja-digital/react-ui'
+import type { INJCardProps } from '@neja-digital/react-ui'
 import classnames from 'classnames'
-
-export interface INJCardProps extends INJBasicProps {
-	children?: React.ReactNode
-	njImgData?: INJImageProp
-	njTitle?: string
-	njText?: string
-	njCtaButtons?: React.ReactNode
-	njColor?: string
-	njRaised?: TNJRaisedProp
-}
 
 export default function NJCard({
 	children,

@@ -66,3 +66,15 @@ export interface INJAboutProps {
 	njAboutTitle?: string
 	njAboutContent?: React.ReactNode
 }
+
+/* ------ Card props ------ */
+
+export interface INJCardProps extends INJBasicProps {
+	children?: React.ReactNode
+	njImgData?: INJImageProp
+	njTitle?: string
+	njText?: string
+	njCtaButtons?: React.ReactNode
+	njColor?: string
+	njRaised?: TNJRaisedProp
+}
