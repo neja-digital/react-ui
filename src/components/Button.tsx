@@ -1,12 +1,6 @@
-import type { INJBasicProps } from '../types/props'
+import type { INJButtonProps } from '@/types/props'
 import classnames from 'classnames'
-import type { ButtonHTMLAttributes } from 'react'
 import type React from 'react'
-
-export interface INJButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, INJBasicProps {
-	children: React.ReactNode,
-	njColor?: string
-}
 
 export default function NJButton({
 	children, className, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, ...rest

@@ -1,8 +1,11 @@
+import type { ButtonHTMLAttributes } from 'react'
+
 /* ------ Basic / Multipurpose props ------ */
 
 export type TNJSizeProp = 'tight' | 'compact' | 'regular' | 'large' | 'xlarge'
 export type TNJTextSizeProp = 'tiny' | 'small' | 'regular' | 'large' | 'xlarge'
 export type TNJVariantProp = 'light' | 'solid'
+export type TNJRaisedProp = 'lightly' | 'medium' | 'highly'
 export type TNJRoundedProp = 'none' | 'tight' | 'medium' | 'large' | 'pill' | 'circle'
 export type TNJBorderProp = 'none' | 'thin' | 'medium' | 'thick'
 export type TNJResizeProp = 'none' | 'horizontal' | 'vertical' | 'both'
@@ -14,6 +17,19 @@ export interface INJBasicProps {
 	njVariant?: TNJVariantProp
 	njRounded?: TNJRoundedProp
 	njBorder?: TNJBorderProp
+}
+
+export interface INJImageProp {
+	srcSet?: string
+	sizes?: string
+	src: string
+	alt: string
+}
+
+/* ------ Button props ------ */
+export interface INJButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, INJBasicProps {
+	children: React.ReactNode,
+	njColor?: string
 }
 
 /* ------ Hero section props ------ */
@@ -41,18 +57,11 @@ export interface INJHeroProps {
 
 /* ------ About section props ------ */
 
-export interface INJAboutImageProp {
-	srcSet: string
-	sizes: string
-	src: string
-	alt: string
-}
-
 export type TNJAboutImagePositionProp = 'left' | 'right'
 
 export interface INJAboutProps {
 	children?: React.ReactNode
-	njImgData?: INJAboutImageProp
+	njImgData?: INJImageProp
 	njImgPos?: TNJAboutImagePositionProp
 	njAboutTitle?: string
 	njAboutContent?: React.ReactNode
