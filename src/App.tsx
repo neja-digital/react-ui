@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import './app.css'
+import '@neja-digital/css/index.css'
 import ButtonDemo from './demos/ButtonDemo'
 import NJSystem from './system/NJSystem'
 import type { TNJTheme } from './types/theme'
