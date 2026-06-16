@@ -23,7 +23,7 @@
     "prepare": "pnpm build"
   },
   "dependencies": {
-    "@neja-digital/css": "git://github.com/neja-digital/css#section/featured"
+    "@neja-digital/css": "0.2.0"
   },
   "peerDependencies": {
     "react": "^19.2.6",
