@@ -1,7 +1,7 @@
 import type { INJAboutProps } from '@/types'
 import classnames from 'classnames'
 
-export default function NJAboutSection1({
+export default function NJSplitSection1({
 	children,
 	njImgData,
 	njImgPos,
