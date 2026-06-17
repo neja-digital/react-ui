@@ -5,7 +5,7 @@ import classnames from 'classnames'
 const DEFAULT_CLASS_NAME = 'nj-featured'
 
 export default function NJFeaturedSection1(props: TNJFeaturedProps) {
-	if (props.njPropsType === 'jsx') {
+	if ('children' in props) {
 		const className = classnames(DEFAULT_CLASS_NAME, props.className)
 
 		return (

@@ -7,7 +7,6 @@ export type TNJBorderProp = 'none' | 'thin' | 'medium' | 'thick'
 export type TNJResizeProp = 'none' | 'horizontal' | 'vertical' | 'both'
 
 export interface INJProps {
-	njPropsType: 'props'
 	className?: string
 	njSize?: TNJSizeProp
 	njTextSize?: TNJTextSizeProp
@@ -24,7 +23,6 @@ export interface INJImageProps {
 }
 
 export interface INJComponentSlot {
-	njPropsType: 'jsx'
 	className?: string
 	children: React.ReactNode
 }

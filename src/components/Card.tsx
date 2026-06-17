@@ -4,7 +4,7 @@ import classnames from 'classnames'
 const DEFAULT_CLASS_NAME = 'nj-card'
 
 export default function NJCard(props: TNJCardProps) {
-	if (props.njPropsType === 'jsx') {
+	if ('children' in props) {
 		const className = classnames(DEFAULT_CLASS_NAME, props.className)
 
 		return (

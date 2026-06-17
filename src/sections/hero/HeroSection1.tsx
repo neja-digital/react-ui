@@ -1,15 +1,11 @@
-import type { INJHeroProps, TNJHeroProps } from '@/types/props'
-import type { INJComponentSlot } from '@/types/props/shared'
+import type { TNJHeroProps } from '@/types/props'
 import classnames from 'classnames'
-import type { JSX } from 'react/jsx-runtime'
 
 const DEFAULT_CLASS_NAME = 'nj-hero'
 const DEFAULT_OVERLAY_CLASS_NAME = 'nj-overlay'
 
-export function NJHeroSection1(props: INJComponentSlot): JSX.Element
-export function NJHeroSection1(props: INJHeroProps): JSX.Element
 export default function NJHeroSection1(props: TNJHeroProps) {
-	if (props.njPropsType === 'jsx') {
+	if ('children' in props) {
 		const sectionClassname = classnames(DEFAULT_CLASS_NAME, props.className)
 
 		return (
