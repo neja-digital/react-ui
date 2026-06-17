@@ -27,6 +27,7 @@ export default function NJCard(props: TNJCardProps) {
 		njImgData,
 		njTitle,
 		njText,
+		njContent,
 		njCtaButtons,
 		njSize,
 		njVariant,
@@ -82,6 +83,7 @@ export default function NJCard(props: TNJCardProps) {
 			<div className="nj-card__content">
 				{ njTitle && titleJsx() }
 				{ njText && textJsx() }
+				{ njContent && njContent }
 				{ njCtaButtons && ctaButtonsJsx() }
 			</div>
 		</article>
