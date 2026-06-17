@@ -5,7 +5,7 @@ const DEFAULT_CLASS_NAME = 'nj-hero'
 const DEFAULT_OVERLAY_CLASS_NAME = 'nj-overlay'
 
 export default function NJHeroSection1(props: TNJHeroProps) {
-	if (props.njPropsType === 'jsx') {
+	if ('children' in props) {
 		const sectionClassname = classnames(DEFAULT_CLASS_NAME, props.className)
 
 		return (

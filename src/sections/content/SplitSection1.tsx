@@ -4,7 +4,7 @@ import classnames from 'classnames'
 const DEFAULT_CLASS_NAME = 'nj-split-section'
 
 export default function NJSplitSection1(props: TNJSplitSectionProps) {
-	if (props.njPropsType === 'jsx') {
+	if ('children' in props) {
 		const className = classnames(DEFAULT_CLASS_NAME, props.className)
 
 		return (

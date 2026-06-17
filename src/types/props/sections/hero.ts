@@ -10,7 +10,6 @@ export interface INJHeroBackground {
 export type TNJHeroContentProp = 'left' | 'center' | 'right'
 
 export interface INJHeroProps {
-	njPropsType: 'props'
 	className?: string
 	njBackground: INJHeroBackground
 	njContentPos?: TNJHeroContentProp
