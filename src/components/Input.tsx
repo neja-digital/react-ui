@@ -1,15 +1,12 @@
-import type { INJBasicProps } from '../types/props'
+import type { TNJInputProps } from '@/types/props/components/input'
 import classnames from 'classnames'
-import type { InputHTMLAttributes } from 'react'
 import type React from 'react'
 
-export interface INJInputProps extends InputHTMLAttributes<HTMLInputElement>, INJBasicProps {
-	njColor?: string
-}
+const DEFAULT_CLASS_NAME = 'nj-input'
 
-export default function NJInput({
-	className, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, ...rest
-}: INJInputProps) {
+export default function NJInput(props: TNJInputProps) {
+	const { className, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, ...rest } = props
+
 	const sizeClass: string = njSize ? `size-${njSize}` : ''
 	const textSizeClass: string = njTextSize ? `text-${njTextSize}` : ''
 	const variantClass: string = njVariant ? `variant-${njVariant}` : ''
@@ -17,7 +14,7 @@ export default function NJInput({
 	const borderClass: string = njBorder && njBorder !== 'none' ? `border-${njBorder}` : ''
 
 	const classList = classnames(
-		'nj-input',
+		DEFAULT_CLASS_NAME,
 		className,
 		sizeClass,
 		textSizeClass,

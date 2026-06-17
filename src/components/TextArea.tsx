@@ -1,15 +1,11 @@
-import type { INJBasicProps, TNJResizeProp } from '../types/props'
+import type { TNJTextAreaProps } from '@/types/props/components/textarea'
 import classnames from 'classnames'
-import type { TextareaHTMLAttributes } from 'react'
 
-export interface INJTextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement>, INJBasicProps {
-	njResize?: TNJResizeProp
-	njColor?: string
-}
+const DEFAULT_CLASS_NAME = 'nj-textarea'
 
-export default function NJTextArea({
-	className, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, njResize, ...rest
-}: INJTextAreaProps) {
+export default function NJTextArea(props: TNJTextAreaProps) {
+	const { className, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, njResize, ...rest } = props
+
 	const sizeClass: string = njSize ? `size-${njSize}` : ''
 	const textSizeClass: string = njTextSize ? `text-${njTextSize}` : ''
 	const variantClass: string = njVariant ? `variant-${njVariant}` : ''
@@ -18,7 +14,7 @@ export default function NJTextArea({
 	const resizeClass: string = njResize && njResize !== 'both' ? `resize-${njResize}` : ''
 
 	const classList = classnames(
-		'nj-textarea',
+		DEFAULT_CLASS_NAME,
 		className,
 		sizeClass,
 		textSizeClass,

@@ -1,17 +1,26 @@
-import type { INJHeroProps } from '@/types/props'
+import type { TNJHeroProps } from '@/types/props'
 import classnames from 'classnames'
 
-export default function NJHeroSection1({
-	children,
-	njBackground,
-	njContentPos,
-	njOverlay,
-	njBlur,
-	njHeadline,
-	njSubheadline,
-	njSupporting,
-	njCtaButtons,
-}: INJHeroProps) {
+const DEFAULT_CLASS_NAME = 'nj-hero'
+const DEFAULT_OVERLAY_CLASS_NAME = 'nj-overlay'
+
+export default function NJHeroSection1(props: TNJHeroProps) {
+	if (props.njPropsType === 'jsx') {
+		const sectionClassname = classnames(DEFAULT_CLASS_NAME, props.className)
+
+		return (
+			<section className={sectionClassname}>
+				<div className="nj-hero__content">
+					{props.children}
+				</div>
+			</section>
+		)
+	}
+
+	const {
+		className, njBackground, njContentPos, njOverlay, njBlur, njHeadline, njSubheadline, njSupporting, njCtaButtons,
+	} = props
+
 	const backgrounds: Record<string, string> = {}
 
 	if (njBackground) {
@@ -29,8 +38,8 @@ export default function NJHeroSection1({
 	const positionClass = njContentPos ? `position-${njContentPos}` : 'position-center'
 	const overlayClass = !njOverlay ? '' : njOverlay > 0 ? 'overlay-light' : 'overlay-dark'
 
-	const sectionClassname = classnames('nj-hero', positionClass)
-	const overlayClassname = classnames('nj-hero__overlay', overlayClass)
+	const sectionClassname = classnames(DEFAULT_CLASS_NAME, className, positionClass)
+	const overlayClassname = classnames(DEFAULT_OVERLAY_CLASS_NAME, overlayClass)
 
 	const headlineJsx = () => (
 		<h2 className="nj-hero__headline">
@@ -60,22 +69,15 @@ export default function NJHeroSection1({
 		<section className={sectionClassname} style={styleObj as React.CSSProperties}>
 			{
 				njOverlay &&
-        <div className={overlayClassname}></div> }
-			{
-				children &&
-        <div className="nj-hero__content">
-        	{children}
-        </div>
+        <div className={overlayClassname}></div>
 			}
-			{
-				!children &&
-				<div className="nj-hero__content">
-					{ njHeadline && headlineJsx() }
-					{ njSubheadline && subheadlineJsx() }
-					{ njCtaButtons && ctaButtonsJsx() }
-					{ njSupporting && supportingJsx() }
-				</div>
-			}
+
+			<div className="nj-hero__content">
+				{ njHeadline && headlineJsx() }
+				{ njSubheadline && subheadlineJsx() }
+				{ njCtaButtons && ctaButtonsJsx() }
+				{ njSupporting && supportingJsx() }
+			</div>
 		</section>
 	)
 }

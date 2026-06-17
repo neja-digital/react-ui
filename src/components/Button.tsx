@@ -1,10 +1,12 @@
-import type { INJButtonProps } from '@/types/props'
+import type { TNJButtonProps } from '@/types/props'
 import classnames from 'classnames'
 import type React from 'react'
 
-export default function NJButton({
-	children, className, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, ...rest
-}: INJButtonProps) {
+const DEFAULT_CLASS_NAME = 'nj-button'
+
+export default function NJButton(props: TNJButtonProps) {
+	const { children, className, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, ...rest } = props
+
 	const sizeClass: string = njSize ? `size-${njSize}` : ''
 	const textSizeClass: string = njTextSize ? `text-${njTextSize}` : ''
 	const variantClass: string = njVariant ? `variant-${njVariant}` : ''
@@ -12,7 +14,7 @@ export default function NJButton({
 	const borderClass: string = njBorder && njBorder !== 'none' ? `border-${njBorder}` : ''
 
 	const classList = classnames(
-		'nj-button',
+		DEFAULT_CLASS_NAME,
 		className,
 		sizeClass,
 		textSizeClass,

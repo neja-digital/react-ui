@@ -1,20 +1,41 @@
-import type { INJCardProps } from '@/types'
+import type { TNJCardProps } from '@/types'
 import classnames from 'classnames'
 
-export default function NJCard({
-	children,
-	className,
-	njImgData,
-	njTitle,
-	njText,
-	njCtaButtons,
-	njSize,
-	njVariant,
-	njRaised,
-	njRounded,
-	njBorder,
-	njColor,
-}: INJCardProps) {
+const DEFAULT_CLASS_NAME = 'nj-card'
+
+export default function NJCard(props: TNJCardProps) {
+	if (props.njPropsType === 'jsx') {
+		const className = classnames(DEFAULT_CLASS_NAME, props.className)
+
+		return (
+			<article className={className}>
+				{
+					props.njImgData &&
+          <div className="nj-card__image-wrapper">
+          	<img className="nj-card__image" {...props.njImgData} />
+          </div>
+				}
+				<div className="nj-card__content">
+					{props.children}
+				</div>
+			</article>
+		)
+	}
+
+	const {
+		className,
+		njImgData,
+		njTitle,
+		njText,
+		njCtaButtons,
+		njSize,
+		njVariant,
+		njRaised,
+		njRounded,
+		njBorder,
+		njColor,
+	} = props
+
 	const sizeClass: string = njSize ? `size-${njSize}` : ''
 	const variantClass: string = njVariant ? `variant-${njVariant}` : ''
 	const raisedClass: string = njRaised ? `raised-${njRaised}` : ''
@@ -22,7 +43,7 @@ export default function NJCard({
 	const borderClass: string = njBorder && njBorder !== 'none' ? `border-${njBorder}` : ''
 
 	const classList = classnames(
-		'nj-card',
+		DEFAULT_CLASS_NAME,
 		className,
 		sizeClass,
 		variantClass,
@@ -58,20 +79,11 @@ export default function NJCard({
 			<div className="nj-card__image-wrapper">
 				<img className="nj-card__image" {...njImgData} />
 			</div>
-			{
-				children &&
-        <div className="nj-card__content">
-        	{children}
-        </div>
-			}
-			{
-				!children &&
-        <div className="nj-card__content">
-        	{ njTitle && titleJsx() }
-        	{ njText && textJsx() }
-        	{ njCtaButtons && ctaButtonsJsx() }
-        </div>
-			}
+			<div className="nj-card__content">
+				{ njTitle && titleJsx() }
+				{ njText && textJsx() }
+				{ njCtaButtons && ctaButtonsJsx() }
+			</div>
 		</article>
 	)
 }

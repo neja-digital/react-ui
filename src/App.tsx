@@ -1,12 +1,8 @@
 import { createRoot } from 'react-dom/client'
 import './app.css'
 import '@neja-digital/css/index.css'
-import ButtonDemo from './demos/ButtonDemo'
 import NJSystem from './system/NJSystem'
 import type { TNJTheme } from './types/theme'
-import InputDemo from './demos/InputDemo'
-import TextAreaDemo from './demos/TextAreaDemo'
-import SelectDemo from './demos/SelectDemo'
 
 const theme: TNJTheme = {
 	colors: {
@@ -25,10 +21,7 @@ createRoot(document.getElementById('root')!).render(
 		</div>
 
 		<div className="demo">
-			<ButtonDemo />
-			<InputDemo />
-			<TextAreaDemo />
-			<SelectDemo />
+			{/* Insert app demo here? */}
 		</div>
 	</NJSystem>,
 )

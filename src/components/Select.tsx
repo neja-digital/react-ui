@@ -1,14 +1,11 @@
-import type { INJBasicProps } from '../types/props'
+import type { TNJSelectProps } from '@/types/props/components/select'
 import classnames from 'classnames'
-import type { SelectHTMLAttributes } from 'react'
 
-export interface INJSelectProps extends SelectHTMLAttributes<HTMLSelectElement>, INJBasicProps {
-	njColor?: string
-}
+const DEFAULT_CLASS_NAME = 'nj-select'
 
-export default function NJSelect({
-	children, className, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, ...rest
-}: INJSelectProps) {
+export default function NJSelect(props: TNJSelectProps) {
+	const { children, className, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, ...rest } = props
+
 	const sizeClass: string = njSize ? `size-${njSize}` : ''
 	const textSizeClass: string = njTextSize ? `text-${njTextSize}` : ''
 	const variantClass: string = njVariant ? `variant-${njVariant}` : ''
@@ -16,7 +13,7 @@ export default function NJSelect({
 	const borderClass: string = njBorder && njBorder !== 'none' ? `border-${njBorder}` : ''
 
 	const classList = classnames(
-		'nj-select',
+		DEFAULT_CLASS_NAME,
 		className,
 		sizeClass,
 		textSizeClass,
