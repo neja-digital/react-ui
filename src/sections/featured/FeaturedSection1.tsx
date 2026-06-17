@@ -26,10 +26,10 @@ export default function NJFeaturedSection1(props: TNJFeaturedProps) {
 		/>
 	)) : []
 
-	const classList = classnames(DEFAULT_CLASS_NAME, className)
+	const sectionClassname = classnames(DEFAULT_CLASS_NAME, className)
 
 	return (
-		<section className={classList}>
+		<section className={sectionClassname}>
 			<h2 className="nj-featured__title">
 				{ njTitle }
 			</h2>

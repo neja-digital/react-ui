@@ -3,7 +3,8 @@ import type { INJComponentSlot, INJImageProps, INJProps, TNJRaisedProp } from '.
 export interface INJCardProps extends INJProps {
 	njImgData?: INJImageProps
 	njTitle: string
-	njText: string
+	njText?: string
+	njContent?: React.ReactNode
 	njCtaButtons?: React.ReactNode
 	njColor?: string
 	njRaised?: TNJRaisedProp

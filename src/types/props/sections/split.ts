@@ -6,8 +6,8 @@ export interface INJSplitSectionProps {
 	className?: string
 	njImgData: INJImageProps
 	njImgPos: TNJSplitSectionImagePositionProp
-	njSectionTitle: string
-	njSectionContent: React.ReactNode
+	njTitle: string
+	njContent: React.ReactNode
 }
 
 export type TNJSplitSectionProps = INJComponentSlot | INJSplitSectionProps

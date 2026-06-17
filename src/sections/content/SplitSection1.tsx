@@ -14,7 +14,7 @@ export default function NJSplitSection1(props: TNJSplitSectionProps) {
 		)
 	}
 
-	const { className, njImgData, njImgPos, njSectionTitle, njSectionContent } = props
+	const { className, njImgData, njImgPos, njTitle, njContent } = props
 
 	const imgPosClass = njImgPos ? `image-${njImgPos}` : ''
 	const sectionClassname = classnames(DEFAULT_CLASS_NAME, className, imgPosClass)
@@ -23,10 +23,10 @@ export default function NJSplitSection1(props: TNJSplitSectionProps) {
 		<section className={sectionClassname}>
 			<div className="nj-split-section__text">
 				<h2 className="nj-split-section__title">
-					{ njSectionTitle }
+					{ njTitle }
 				</h2>
 				<div className="nj-split-section__description">
-					{ njSectionContent }
+					{ njContent }
 				</div>
 			</div>
 			<div className="nj-split-section__image">
