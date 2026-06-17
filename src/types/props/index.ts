@@ -6,6 +6,6 @@ export * from './components/textarea'
 
 export * from './sections/featured'
 export * from './sections/hero'
-export * from './sections/split'
+export * from './sections/image'
 
 export * from './shared'

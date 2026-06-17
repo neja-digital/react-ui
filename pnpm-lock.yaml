@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@neja-digital/css':
-        specifier: 0.2.2
-        version: 0.2.2
+        specifier: git://github.com/neja-digital/css#section/text
+        version: https://codeload.github.com/neja-digital/css/tar.gz/97cc9ff1e4bda528b4effbe13adbd1ab8bc3ebb2
     devDependencies:
       '@babel/core':
         specifier: ^7.29.0
@@ -251,8 +251,9 @@ packages:
       '@emnapi/core': ^1.7.1
       '@emnapi/runtime': ^1.7.1
 
-  '@neja-digital/css@0.2.2':
-    resolution: {integrity: sha512-+u3SjJvmTUgWAP6PBNQABCbn6Ga5d8DZZ9iHKT+ayfUPk+plDva/ap3/y0Ly2vFms08JOwA/R2GcCGiTN+amVw==, tarball: https://npm.pkg.github.com/download/@neja-digital/css/0.2.2/ba5689a4a253aa7bc2bb18ccd57ee073cff96aa1}
+  '@neja-digital/css@https://codeload.github.com/neja-digital/css/tar.gz/97cc9ff1e4bda528b4effbe13adbd1ab8bc3ebb2':
+    resolution: {tarball: https://codeload.github.com/neja-digital/css/tar.gz/97cc9ff1e4bda528b4effbe13adbd1ab8bc3ebb2}
+    version: 0.3.0
 
   '@oxc-project/types@0.133.0':
     resolution: {integrity: sha512-KzkdCd6Uxqnf6l3HOw1xfatAlUURA0g14cvBYFyJ5SaNOQbOUvBr9PKArcPcrNIeRsBdgcUzOGrhKveVpvOIGA==}
@@ -1514,7 +1515,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.2
     optional: true
 
-  '@neja-digital/css@0.2.2': {}
+  '@neja-digital/css@https://codeload.github.com/neja-digital/css/tar.gz/97cc9ff1e4bda528b4effbe13adbd1ab8bc3ebb2': {}
 
   '@oxc-project/types@0.133.0': {}
 

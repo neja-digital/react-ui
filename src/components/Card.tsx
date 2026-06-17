@@ -77,9 +77,12 @@ export default function NJCard(props: TNJCardProps) {
 
 	return (
 		<article className={classList} style={cardStyle as React.CSSProperties}>
-			<div className="nj-card__image-wrapper">
-				<img className="nj-card__image" {...njImgData} />
-			</div>
+			{
+				njImgData &&
+        <div className="nj-card__image-wrapper">
+        	<img className="nj-card__image" {...njImgData} />
+        </div>
+			}
 			<div className="nj-card__content">
 				{ njTitle && titleJsx() }
 				{ njText && textJsx() }
