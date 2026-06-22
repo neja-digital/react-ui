@@ -2,6 +2,7 @@ import type { TNJTextSectionProps } from '@/types/props/sections/text'
 import classnames from 'classnames'
 
 const DEFAULT_CLASS_NAME = 'nj-text-section'
+const DEFAULT_WRAPPER_CLASS_NAME = 'nj-text-section__wrapper'
 
 export default function NJTextSection1(props: TNJTextSectionProps) {
   if ('children' in props) {
@@ -18,11 +19,12 @@ export default function NJTextSection1(props: TNJTextSectionProps) {
 
   const directionClass: string = njDirection ? `direction-${njDirection}` : ''
   
-  const sectionClassname = classnames(DEFAULT_CLASS_NAME, className, directionClass)
+  const sectionClassname = classnames(DEFAULT_CLASS_NAME, className)
+  const sectionWrapperClassname = classnames(DEFAULT_WRAPPER_CLASS_NAME, directionClass)
 
   return (
     <section className={sectionClassname}>
-      <h2 className="nj-text-section__title">
+      <h2 className={sectionWrapperClassname}>
         { njTitle }
       </h2>
       <div className="nj-text-section__wrapper">
