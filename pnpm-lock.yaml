@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@neja-digital/css':
-        specifier: 0.3.0
-        version: 0.3.0
+        specifier: 0.3.1
+        version: 0.3.1
     devDependencies:
       '@babel/core':
         specifier: ^7.29.0
@@ -251,8 +251,8 @@ packages:
       '@emnapi/core': ^1.7.1
       '@emnapi/runtime': ^1.7.1
 
-  '@neja-digital/css@0.3.0':
-    resolution: {integrity: sha512-CYcgO3JpjL80n6nqrXOgme4qV/lUpNxT5Xm3/puC9j+5+jJL+6/HTKvau/VDznZigleI+POawC0+MpkT3dMl3w==, tarball: https://npm.pkg.github.com/download/@neja-digital/css/0.3.0/6d999fc800b4f28d58b0ae9aee917fa0b16e4247}
+  '@neja-digital/css@0.3.1':
+    resolution: {integrity: sha512-IB2Hfel2sI4R8j+Ta73WOC7Pko7Ni6ejqonVZhLQQ1xHs5yt9mGV/U0n2yk9yo8Q0ebouGXvMMrIgOgV+osJHQ==, tarball: https://npm.pkg.github.com/download/@neja-digital/css/0.3.1/0e423b56ca2b28a4b84873ebdb30df151a40e85e}
 
   '@oxc-project/types@0.133.0':
     resolution: {integrity: sha512-KzkdCd6Uxqnf6l3HOw1xfatAlUURA0g14cvBYFyJ5SaNOQbOUvBr9PKArcPcrNIeRsBdgcUzOGrhKveVpvOIGA==}
@@ -1514,7 +1514,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.2
     optional: true
 
-  '@neja-digital/css@0.3.0': {}
+  '@neja-digital/css@0.3.1': {}
 
   '@oxc-project/types@0.133.0': {}
 

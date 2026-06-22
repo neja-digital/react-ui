@@ -28,7 +28,7 @@ export default defineConfig([
       "@stylistic/max-len": ["error", {
         "code": 120,
       }],
-      "@stylistic/indent": ["error", "tab"],
+      "@stylistic/indent": ["error", 2],
       "@stylistic/no-multiple-empty-lines": ["error", {
         "max": 1,
       }],

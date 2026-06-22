@@ -5,29 +5,29 @@ import { resolve } from 'node:path'
 
 // https://vite.dev/config/
 export default defineConfig({
-	plugins: [
-		react(),
-		dts({
-			tsconfigPath: './tsconfig.app.json',
-			bundleTypes: true,
-		}),
-	],
-	build: {
-		emptyOutDir: true,
-		lib: {
-			entry: resolve(import.meta.dirname, 'src/index.ts'),
-			name: 'NJReactUI',
-			formats: ['es'],
-			fileName: 'index',
-		},
+  plugins: [
+    react(),
+    dts({
+      tsconfigPath: './tsconfig.app.json',
+      bundleTypes: true,
+    }),
+  ],
+  build: {
+    emptyOutDir: true,
+    lib: {
+      entry: resolve(import.meta.dirname, 'src/index.ts'),
+      name: 'NJReactUI',
+      formats: ['es'],
+      fileName: 'index',
+    },
 
-		rolldownOptions: {
-			// external: ['react', 'react-dom'],
-			plugins: [
-				esmExternalRequirePlugin({
-					external: ['react', 'react-dom', 'react/jsx-runtime'],
-				}),
-			],
-		},
-	},
+    rolldownOptions: {
+      // external: ['react', 'react-dom'],
+      plugins: [
+        esmExternalRequirePlugin({
+          external: ['react', 'react-dom', 'react/jsx-runtime'],
+        }),
+      ],
+    },
+  },
 })

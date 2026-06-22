@@ -7,22 +7,22 @@ export type TNJBorderProp = 'none' | 'thin' | 'medium' | 'thick'
 export type TNJResizeProp = 'none' | 'horizontal' | 'vertical' | 'both'
 
 export interface INJProps {
-	className?: string
-	njSize?: TNJSizeProp
-	njTextSize?: TNJTextSizeProp
-	njVariant?: TNJVariantProp
-	njRounded?: TNJRoundedProp
-	njBorder?: TNJBorderProp
+  className?: string
+  njSize?: TNJSizeProp
+  njTextSize?: TNJTextSizeProp
+  njVariant?: TNJVariantProp
+  njRounded?: TNJRoundedProp
+  njBorder?: TNJBorderProp
 }
 
 export interface INJImageProps {
-	srcSet?: string
-	sizes?: string
-	src: string
-	alt: string
+  srcSet?: string
+  sizes?: string
+  src: string
+  alt: string
 }
 
 export interface INJComponentSlot {
-	className?: string
-	children: React.ReactNode
+  className?: string
+  children: React.ReactNode
 }
