@@ -24,10 +24,10 @@ export default function NJTextSection1(props: TNJTextSectionProps) {
 
   return (
     <section className={sectionClassname}>
-      <h2 className={sectionWrapperClassname}>
+      <h2 className="nj-text-section__title">
         { njTitle }
       </h2>
-      <div className="nj-text-section__wrapper">
+      <div className={sectionWrapperClassname}>
         <div className="nj-text-section__first">
           {
             njSubtitle &&
