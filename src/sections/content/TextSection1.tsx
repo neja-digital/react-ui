@@ -2,7 +2,6 @@ import type { TNJTextSectionProps } from '@/types/props/sections/text'
 import classnames from 'classnames'
 
 const DEFAULT_CLASS_NAME = 'nj-text-section'
-const DEFAULT_WRAPPER_CLASS_NAME = 'nj-text-section__wrapper'
 
 export default function NJTextSection1(props: TNJTextSectionProps) {
   if ('children' in props) {
@@ -19,46 +18,43 @@ export default function NJTextSection1(props: TNJTextSectionProps) {
 
   const directionClass: string = njDirection ? `direction-${njDirection}` : ''
   
-  const sectionClassname = classnames(DEFAULT_CLASS_NAME, className)
-  const sectionWrapperClassname = classnames(DEFAULT_WRAPPER_CLASS_NAME, directionClass)
+  const sectionClassname = classnames(DEFAULT_CLASS_NAME, className, directionClass)
 
   return (
     <section className={sectionClassname}>
-      <h2 className="nj-text-section__title">
-        { njTitle }
-      </h2>
-      <div className={sectionWrapperClassname}>
-        <div className="nj-text-section__first">
-          {
-            njSubtitle &&
+      <div className="nj-text-section__first">
+        <h2 className="nj-text-section__title">
+          { njTitle }
+        </h2>
+        {
+          njSubtitle &&
           <h3 className="nj-text-section__subtitle">
             { njSubtitle }
           </h3>
-          }
-          <div className="nj-text-section__content">
-            { njContent }
-          </div>
-          {
-            njCtaButtons && njCtaButtonsPos === 'first' &&
+        }
+        <div className="nj-text-section__content">
+          { njContent }
+        </div>
+        {
+          njCtaButtons && njCtaButtonsPos === 'first' &&
           <div className="nj-text-section__cta-buttons">
             { njCtaButtons }
           </div>
-          }
-        </div>
-        <div className="nj-text-section__second">
-          {
-            njHighlights &&
+        }
+      </div>
+      <div className="nj-text-section__second">
+        {
+          njHighlights &&
           <div className="nj-text-section__highlights">
             { njHighlights }
           </div>
-          }
-          {
-            njCtaButtons && njCtaButtonsPos === 'second' &&
+        }
+        {
+          njCtaButtons && njCtaButtonsPos === 'second' &&
           <div className="nj-text-section__cta-buttons">
             { njCtaButtons }
           </div>
-          }
-        </div>
+        }
       </div>
     </section>
   )
