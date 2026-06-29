@@ -5,7 +5,7 @@ import type React from 'react'
 const DEFAULT_CLASS_NAME = 'nj-input'
 
 export default function NJInput(props: TNJInputProps) {
-  const { className, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, ...rest } = props
+  const { className, id, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, njLabel, ...rest } = props
 
   const sizeClass: string = njSize ? `size-${njSize}` : ''
   const textSizeClass: string = njTextSize ? `text-${njTextSize}` : ''
@@ -28,6 +28,16 @@ export default function NJInput(props: TNJInputProps) {
   }
 
   return (
-    <input className={classList} style={inputStyle as React.CSSProperties} {...rest} />
+    <>
+      {
+        njLabel &&
+        <label className={`${id}-label`} htmlFor={id}>{njLabel}</label>
+      }
+      <input
+        id={id}
+        className={classList}
+        style={inputStyle as React.CSSProperties}
+        {...rest} />
+    </>
   )
 }

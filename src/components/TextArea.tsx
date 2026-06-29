@@ -4,7 +4,19 @@ import classnames from 'classnames'
 const DEFAULT_CLASS_NAME = 'nj-textarea'
 
 export default function NJTextArea(props: TNJTextAreaProps) {
-  const { className, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, njResize, ...rest } = props
+  const {
+    className,
+    njSize,
+    njTextSize,
+    njVariant,
+    njRounded,
+    njBorder,
+    njColor,
+    njResize,
+    njLabel,
+    id,
+    ...rest
+  } = props
 
   const sizeClass: string = njSize ? `size-${njSize}` : ''
   const textSizeClass: string = njTextSize ? `text-${njTextSize}` : ''
@@ -29,6 +41,16 @@ export default function NJTextArea(props: TNJTextAreaProps) {
   }
 
   return (
-    <textarea className={classList} style={textAreaStyle as React.CSSProperties} {...rest} />
+    <>
+      {
+        njLabel &&
+        <label className={`${id}-label`} htmlFor={id}>{njLabel}</label>
+      }
+      <textarea id={id}
+        className={classList}
+        style={textAreaStyle as React.CSSProperties}
+        {...rest}
+      />
+    </>
   )
 }
