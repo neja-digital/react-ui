@@ -28,7 +28,7 @@ export default function NJInput(props: TNJInputProps) {
   }
 
   return (
-    <>
+    <div className="nj-input-wrapper">
       {
         njLabel &&
         <label className={`${id}-label`} htmlFor={id}>{njLabel}</label>
@@ -38,6 +38,6 @@ export default function NJInput(props: TNJInputProps) {
         className={classList}
         style={inputStyle as React.CSSProperties}
         {...rest} />
-    </>
+    </div>
   )
 }

@@ -41,7 +41,7 @@ export default function NJTextArea(props: TNJTextAreaProps) {
   }
 
   return (
-    <>
+    <div className="nj-textarea-wrapper">
       {
         njLabel &&
         <label className={`${id}-label`} htmlFor={id}>{njLabel}</label>
@@ -51,6 +51,6 @@ export default function NJTextArea(props: TNJTextAreaProps) {
         style={textAreaStyle as React.CSSProperties}
         {...rest}
       />
-    </>
+    </div>
   )
 }
