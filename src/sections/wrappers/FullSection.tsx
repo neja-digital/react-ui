@@ -4,7 +4,7 @@ import classnames from 'classnames'
 const DEFAULT_CLASS_NAME = 'nj-full-section'
 
 export default function NJFullSection(props: TNJFullSectionProps) {
-  const { className, njBackground } = props
+  const { className, id, njBackground } = props
 
   const classList = classnames(DEFAULT_CLASS_NAME, className)
 
@@ -13,7 +13,7 @@ export default function NJFullSection(props: TNJFullSectionProps) {
   }
 
   return (
-    <div className={classList} style={sectionStyle as React.CSSProperties}>
+    <div id={id} className={classList} style={sectionStyle as React.CSSProperties}>
       {props.children}
     </div>
   )
