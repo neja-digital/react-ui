@@ -5,6 +5,8 @@ export * from './components/select'
 export * from './components/testimonial'
 export * from './components/textarea'
 
+export * from './components/contact'
+
 export * from './sections/featured'
 export * from './sections/full-section'
 export * from './sections/hero'

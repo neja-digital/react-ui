@@ -4,3 +4,5 @@ export { default as NJInput } from './Input'
 export { default as NJSelect } from './Select'
 export { default as NJTestimonial } from './Testimonial'
 export { default as NJTextArea } from './TextArea'
+
+export { default as NJContactDetails } from './contact/Details'
