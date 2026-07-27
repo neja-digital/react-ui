@@ -4,7 +4,7 @@ import classnames from 'classnames'
 
 const DEFAULT_CLASS_NAME = 'nj-contact-details'
 
-export default function ContactDetails(props: TNJContactDetailsProps) {
+export default function NJContactDetails(props: TNJContactDetailsProps) {
   if ('children' in props) {
     const className = classnames(DEFAULT_CLASS_NAME, props.className)
 
