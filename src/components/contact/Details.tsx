@@ -34,7 +34,8 @@ export default function NJContactDetails(props: TNJContactDetailsProps) {
     <section className={sectionClassname}>
       <div className="contact__address">
         {
-          isContactInfo(njInfo) && <>{ Object.keys(njInfo).map(k => mapContactInfo(njInfo, k)) }</>
+          isContactInfo(njInfo) &&
+          <>{ Object.keys(njInfo).map(k => mapContactInfo(njInfo, k as keyof Partial<INJContactInfo>)) }</>
         }
         {
           !isContactInfo(njInfo) && njInfo
