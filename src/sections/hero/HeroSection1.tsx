@@ -2,7 +2,7 @@ import type { TNJHeroProps } from '@/types/props'
 import classnames from 'classnames'
 
 const DEFAULT_CLASS_NAME = 'nj-hero'
-const DEFAULT_OVERLAY_CLASS_NAME = 'nj-overlay'
+const DEFAULT_OVERLAY_CLASS_NAME = 'nj-hero__overlay'
 
 export default function NJHeroSection1(props: TNJHeroProps) {
   if ('children' in props) {
