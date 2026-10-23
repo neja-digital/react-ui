@@ -11,6 +11,12 @@ importers:
       '@neja-digital/css':
         specifier: link:../neja-digital-css
         version: link:../neja-digital-css
+      classnames:
+        specifier: ^2.5.1
+        version: 2.5.1
+      react-icons:
+        specifier: ^5.6.0
+        version: 5.7.0(react@19.2.8)
     devDependencies:
       '@babel/core':
         specifier: ^7.29.0
@@ -45,9 +51,6 @@ importers:
       babel-plugin-react-compiler:
         specifier: ^1.0.0
         version: 1.0.0
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       eslint:
         specifier: ^10.3.0
         version: 10.8.0
@@ -66,9 +69,6 @@ importers:
       react-dom:
         specifier: ^19.2.6
         version: 19.2.8(react@19.2.8)
-      react-icons:
-        specifier: ^5.6.0
-        version: 5.7.0(react@19.2.8)
       typescript:
         specifier: ~6.0.2
         version: 6.0.3
