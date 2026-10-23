@@ -1,11 +1,14 @@
 import type { TNJTextAreaProps } from '@/types/props/components/textarea'
 import classnames from 'classnames'
+import { useId } from 'react'
+import { getColorStyle, getModifierClasses } from '../utils'
 
 const DEFAULT_CLASS_NAME = 'nj-textarea'
 
 export default function NJTextArea(props: TNJTextAreaProps) {
   const {
     className,
+    style,
     njSize,
     njTextSize,
     njVariant,
@@ -18,37 +21,27 @@ export default function NJTextArea(props: TNJTextAreaProps) {
     ...rest
   } = props
 
-  const sizeClass: string = njSize ? `size-${njSize}` : ''
-  const textSizeClass: string = njTextSize ? `text-${njTextSize}` : ''
-  const variantClass: string = njVariant ? `variant-${njVariant}` : ''
-  const roundedClass: string = njRounded && njRounded !== 'none' ? `rounded-${njRounded}` : ''
-  const borderClass: string = njBorder && njBorder !== 'none' ? `border-${njBorder}` : ''
+  const generatedId = useId()
+  const textAreaId = id ?? generatedId
+
   const resizeClass: string = njResize && njResize !== 'both' ? `resize-${njResize}` : ''
 
   const classList = classnames(
     DEFAULT_CLASS_NAME,
     className,
-    sizeClass,
-    textSizeClass,
-    variantClass,
-    roundedClass,
-    borderClass,
+    getModifierClasses({ njSize, njTextSize, njVariant, njRounded, njBorder }),
     resizeClass,
   )
-
-  const textAreaStyle: Record<string, string> = {
-    '--textarea-color': njColor ? `var(--${njColor})` : 'transparent',
-  }
 
   return (
     <div className="nj-textarea-wrapper">
       {
         njLabel &&
-        <label className={`${id}-label`} htmlFor={id}>{njLabel}</label>
+        <label className={`${textAreaId}-label`} htmlFor={textAreaId}>{njLabel}</label>
       }
-      <textarea id={id}
+      <textarea id={textAreaId}
         className={classList}
-        style={textAreaStyle as React.CSSProperties}
+        style={getColorStyle('--textarea-color', njColor, style)}
         {...rest}
       />
     </div>

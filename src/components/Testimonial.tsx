@@ -6,8 +6,9 @@ const MAX_RATING = 5
 
 export default function NJTestimonial(props: TNJTestimonialProps) {
   const { njAuthor, njReview, njRating, ...rest } = props
-  const filledStarsJsx = new Array(njRating).fill(0).map(_ => <FaStar />)
-  const emptyStarsJsx = new Array(MAX_RATING - njRating).fill(0).map(_ => <FaRegStar />)
+  const rating = Math.min(Math.max(Math.round(njRating), 0), MAX_RATING)
+  const filledStarsJsx = Array.from({ length: rating }, (_, i) => <FaStar key={`filled-${i}`} />)
+  const emptyStarsJsx = Array.from({ length: MAX_RATING - rating }, (_, i) => <FaRegStar key={`empty-${i}`} />)
 
   const testimonialContent = (
     <>

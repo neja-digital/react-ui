@@ -1,4 +1,4 @@
-import '@neja-digital/css'
+import '@neja-digital/css/index.css'
 
 export * from './components'
 export * from './sections'

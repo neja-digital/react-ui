@@ -18,14 +18,15 @@ export default function NJHeroSection1(props: TNJHeroProps) {
   }
 
   const {
-    className, njBackground, njContentPos, njOverlay, njBlur, njHeadline, njSubheadline, njSupporting, njCtaButtons,
+    className, njBackgroundImages, njContentPos, njOverlay, njBlur, njHeadline, njSubheadline, njSupporting,
+    njCtaButtons,
   } = props
 
   const backgrounds: Record<string, string> = {}
 
-  if (njBackground) {
-    Object.keys(njBackground).forEach((k: string) => {
-      backgrounds[`--${k}`] = `url(${njBackground[k as keyof typeof njBackground]})`
+  if (njBackgroundImages) {
+    Object.keys(njBackgroundImages).forEach((k: string) => {
+      backgrounds[`--${k}`] = `url(${njBackgroundImages[k as keyof typeof njBackgroundImages]})`
     })
   }
 
@@ -68,8 +69,9 @@ export default function NJHeroSection1(props: TNJHeroProps) {
   return (
     <section className={sectionClassname} style={styleObj as React.CSSProperties}>
       {
-        njOverlay &&
-        <div className={overlayClassname}></div>
+        njOverlay ?
+          <div className={overlayClassname}></div> :
+          null
       }
 
       <div className="nj-hero__content">

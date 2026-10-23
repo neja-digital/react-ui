@@ -11,7 +11,7 @@ export type TNJHeroContentProp = 'left' | 'center' | 'right'
 
 export interface INJHeroProps {
   className?: string
-  njBackground: INJHeroBackground
+  njBackgroundImages: INJHeroBackground
   njContentPos?: TNJHeroContentProp
   njOverlay?: number
   njBlur?: number

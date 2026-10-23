@@ -1,34 +1,20 @@
 import type { TNJButtonProps } from '@/types/props'
 import classnames from 'classnames'
-import type React from 'react'
+import { getColorStyle, getModifierClasses } from '../utils'
 
 const DEFAULT_CLASS_NAME = 'nj-button'
 
 export default function NJButton(props: TNJButtonProps) {
-  const { children, className, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, ...rest } = props
-
-  const sizeClass: string = njSize ? `size-${njSize}` : ''
-  const textSizeClass: string = njTextSize ? `text-${njTextSize}` : ''
-  const variantClass: string = njVariant ? `variant-${njVariant}` : ''
-  const roundedClass: string = njRounded && njRounded !== 'none' ? `rounded-${njRounded}` : ''
-  const borderClass: string = njBorder && njBorder !== 'none' ? `border-${njBorder}` : ''
+  const { children, className, style, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, ...rest } = props
 
   const classList = classnames(
     DEFAULT_CLASS_NAME,
     className,
-    sizeClass,
-    textSizeClass,
-    variantClass,
-    roundedClass,
-    borderClass,
+    getModifierClasses({ njSize, njTextSize, njVariant, njRounded, njBorder }),
   )
 
-  const buttonStyle: Record<string, string> = {
-    '--button-color': njColor ? `var(--${njColor})` : 'transparent',
-  }
-
   return (
-    <button className={classList} style={buttonStyle as React.CSSProperties} {...rest}>
+    <button className={classList} style={getColorStyle('--button-color', njColor, style)} {...rest}>
       {children}
     </button>)
 }

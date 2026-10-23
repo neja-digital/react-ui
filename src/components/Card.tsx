@@ -1,5 +1,6 @@
 import type { TNJCardProps } from '@/types'
 import classnames from 'classnames'
+import { getColorStyle, getModifierClasses } from '../utils'
 
 const DEFAULT_CLASS_NAME = 'nj-card'
 
@@ -37,26 +38,14 @@ export default function NJCard(props: TNJCardProps) {
     njColor,
   } = props
 
-  const sizeClass: string = njSize ? `size-${njSize}` : ''
-  const variantClass: string = njVariant ? `variant-${njVariant}` : ''
-  const raisedClass: string = njRaised ? `raised-${njRaised}` : ''
-  const roundedClass: string = njRounded && njRounded !== 'none' ? `rounded-${njRounded}` : ''
-  const borderClass: string = njBorder && njBorder !== 'none' ? `border-${njBorder}` : ''
-
   const classList = classnames(
     DEFAULT_CLASS_NAME,
     className,
-    sizeClass,
-    variantClass,
-    raisedClass,
-    roundedClass,
-    borderClass,
+    getModifierClasses({ njSize, njVariant, njRaised, njRounded, njBorder }),
   )
 
-  const cardStyle: Record<string, string> = {
-    '--card-color': njColor ? `var(--${njColor})` : 'transparent',
-  }
-  
+  const cardStyle = getColorStyle('--card-color', njColor)
+
   const titleJsx = () => (
     <h3 className="nj-card__title">
       { njTitle }
@@ -76,7 +65,7 @@ export default function NJCard(props: TNJCardProps) {
   )
 
   return (
-    <article className={classList} style={cardStyle as React.CSSProperties}>
+    <article className={classList} style={cardStyle}>
       {
         njImgData &&
         <div className="nj-card__image-wrapper">

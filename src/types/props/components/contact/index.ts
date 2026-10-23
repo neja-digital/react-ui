@@ -1,2 +1,2 @@
 export * from './details'
-export * from './details'
+export * from './predicates'

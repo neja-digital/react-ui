@@ -5,6 +5,7 @@
   "module": "./dist/index.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
     "./react-ui.css": {
@@ -23,7 +24,7 @@
     "prepare": "pnpm build"
   },
   "dependencies": {
-    "@neja-digital/css": "git@github.com:neja-digital/css.git#component/navbar"
+    "@neja-digital/css": "link:../neja-digital-css"
   },
   "peerDependencies": {
     "react": "^19.2.6",
