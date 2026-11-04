@@ -1,7 +1,10 @@
 import { createRoot } from 'react-dom/client'
 import './app.css'
 import '@neja-digital/css/index.css'
-import { NJButton, NJCard, NJContactDetails, NJInput, NJSelect, NJTestimonial, NJTextArea } from './components'
+import {
+  NJButton, NJCard, NJContactDetails, NJInput, NJNavbar, NJNavbarBrand, NJNavbarLink, NJNavbarLinks, NJNavbarMenu,
+  NJNavbarToggle, NJSelect, NJTestimonial, NJTextArea,
+} from './components'
 import NJSystem from './system/NJSystem'
 import type { TNJTheme } from './types/theme'
 import { mapStringListToOptions } from './utils'
@@ -21,6 +24,22 @@ createRoot(document.getElementById('root')!).render(
       <h1>Components Demo</h1>
       <p>Feel free to edit the props' values and see how it affects the elements</p>
     </div>
+
+    <NJNavbar aria-label="Main"
+      njVariant="solid"
+      njColor="primary"
+      njSticky>
+      <NJNavbarBrand href="#">Brand</NJNavbarBrand>
+      <NJNavbarToggle />
+      <NJNavbarMenu>
+        <NJNavbarLinks>
+          <NJNavbarLink href="#" njActive>Home</NJNavbarLink>
+          <NJNavbarLink href="#about">About</NJNavbarLink>
+          <NJNavbarLink href="#contact">Contact</NJNavbarLink>
+        </NJNavbarLinks>
+        <NJButton njVariant="light" njColor="secondary" njRounded="pill">Book a table</NJButton>
+      </NJNavbarMenu>
+    </NJNavbar>
 
     <div className="demo">
       <div>

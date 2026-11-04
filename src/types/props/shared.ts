@@ -15,6 +15,12 @@ export interface INJProps {
   njBorder?: TNJBorderProp
 }
 
+// Props of a component that can render as another element/component through `as`.
+// The props of the rendered element (e.g. `to` for a router link) are inferred from `as`
+export type TNJPolymorphicProps<T extends React.ElementType, TOwnProps = object> = TOwnProps & {
+  as?: T
+} & Omit<React.ComponentPropsWithRef<T>, keyof TOwnProps | 'as'>
+
 export interface INJImageProps {
   srcSet?: string
   sizes?: string
