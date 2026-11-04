@@ -1,42 +1,32 @@
 import type { TNJInputProps } from '@/types/props/components/input'
 import classnames from 'classnames'
-import type React from 'react'
+import { useId } from 'react'
+import { getColorStyle, getModifierClasses } from '../utils'
 
 const DEFAULT_CLASS_NAME = 'nj-input'
 
 export default function NJInput(props: TNJInputProps) {
-  const { className, id, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, njLabel, ...rest } = props
+  const { className, id, style, njSize, njTextSize, njVariant, njRounded, njBorder, njColor, njLabel, ...rest } = props
 
-  const sizeClass: string = njSize ? `size-${njSize}` : ''
-  const textSizeClass: string = njTextSize ? `text-${njTextSize}` : ''
-  const variantClass: string = njVariant ? `variant-${njVariant}` : ''
-  const roundedClass: string = njRounded && njRounded !== 'none' ? `rounded-${njRounded}` : ''
-  const borderClass: string = njBorder && njBorder !== 'none' ? `border-${njBorder}` : ''
+  const generatedId = useId()
+  const inputId = id ?? generatedId
 
   const classList = classnames(
     DEFAULT_CLASS_NAME,
     className,
-    sizeClass,
-    textSizeClass,
-    variantClass,
-    roundedClass,
-    borderClass,
+    getModifierClasses({ njSize, njTextSize, njVariant, njRounded, njBorder }),
   )
-
-  const inputStyle: Record<string, string> = {
-    '--input-color': njColor ? `var(--${njColor})` : 'transparent',
-  }
 
   return (
     <div className="nj-input-wrapper">
       {
         njLabel &&
-        <label className={`${id}-label`} htmlFor={id}>{njLabel}</label>
+        <label className={`${inputId}-label`} htmlFor={inputId}>{njLabel}</label>
       }
       <input
-        id={id}
+        id={inputId}
         className={classList}
-        style={inputStyle as React.CSSProperties}
+        style={getColorStyle('--input-color', njColor, style)}
         {...rest} />
     </div>
   )

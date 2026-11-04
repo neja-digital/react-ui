@@ -19,9 +19,9 @@ export default function NJFeaturedSection1(props: TNJFeaturedProps) {
 
   const { className, njTitle, njFeaturedItems, njCtaButtons } = props
 
-  const featuredCardsJsx = njFeaturedItems ? njFeaturedItems.map(item => (
+  const featuredCardsJsx = njFeaturedItems ? njFeaturedItems.map((item, index) => (
     <NJCard
-      key={item.njTitle}
+      key={`${index}-${item.njTitle}`}
       { ...item }
     />
   )) : []
