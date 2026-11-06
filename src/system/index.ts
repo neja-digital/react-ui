@@ -1,1 +1,1 @@
-export { default as NJSystem } from './NJSystem'
+export { default as NJSystem } from './NJSystem';

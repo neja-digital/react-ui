@@ -3,4 +3,4 @@ export type TNJFullSectionProps = {
   id?: string
   className?: string
   njBackground?: string
-}
+};

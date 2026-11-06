@@ -1,4 +1,4 @@
-import type { INJComponentSlot } from '../shared'
+import type { INJComponentSlot } from '../shared';
 
 export interface INJHeroBackground {
   mobileBg?: string,
@@ -7,7 +7,7 @@ export interface INJHeroBackground {
   desktopBg?: string,
 }
 
-export type TNJHeroContentProp = 'left' | 'center' | 'right'
+export type TNJHeroContentProp = 'left' | 'center' | 'right';
 
 export interface INJHeroProps {
   className?: string
@@ -21,4 +21,4 @@ export interface INJHeroProps {
   njCtaButtons: React.ReactNode
 }
 
-export type TNJHeroProps = INJComponentSlot | INJHeroProps
+export type TNJHeroProps = INJComponentSlot | INJHeroProps;

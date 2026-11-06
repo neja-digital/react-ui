@@ -1,4 +1,4 @@
-import type { INJComponentSlot } from '../../shared'
+import type { INJComponentSlot } from '../../shared';
 
 export interface INJContactInfo {
   title: string
@@ -7,7 +7,7 @@ export interface INJContactInfo {
   phone: string
 }
 
-export type TNJContactInfo = React.ReactNode | Partial<INJContactInfo>
+export type TNJContactInfo = React.ReactNode | Partial<INJContactInfo>;
 
 export interface INJWorkHours {
   start: string
@@ -26,7 +26,7 @@ export interface INJContactHours {
   sunday: INJWorkHours
 }
 
-export type TNJContactHours = React.ReactNode | Partial<INJContactHours>
+export type TNJContactHours = React.ReactNode | Partial<INJContactHours>;
 
 export interface INJContactDetailsProps {
   className?: string
@@ -34,4 +34,4 @@ export interface INJContactDetailsProps {
   njOpeningHours: TNJContactHours
 }
 
-export type TNJContactDetailsProps = INJComponentSlot | INJContactDetailsProps
+export type TNJContactDetailsProps = INJComponentSlot | INJContactDetailsProps;

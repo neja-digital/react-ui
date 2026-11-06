@@ -1,5 +1,5 @@
-import type { INJCardProps } from '../components/card'
-import type { INJComponentSlot } from '../shared'
+import type { INJCardProps } from '../components/card';
+import type { INJComponentSlot } from '../shared';
 
 export interface INJFeaturedProps {
   className?: string
@@ -8,4 +8,4 @@ export interface INJFeaturedProps {
   njCtaButtons?: React.ReactNode
 }
 
-export type TNJFeaturedProps = INJComponentSlot | INJFeaturedProps
+export type TNJFeaturedProps = INJComponentSlot | INJFeaturedProps;

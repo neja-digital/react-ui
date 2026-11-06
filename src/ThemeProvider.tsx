@@ -1,5 +1,5 @@
-import type { TNJTheme } from './types/theme'
-import { keyToCssVariable } from './utils'
+import type { TNJTheme } from './types/theme';
+import { keyToCssVariable } from './utils';
 
 interface INJThemeProviderProps {
   children: React.ReactNode
@@ -7,12 +7,12 @@ interface INJThemeProviderProps {
 }
 
 export default function NJThemeProvider({ children, theme }: INJThemeProviderProps) {
-  const rootStyles: Record<string, string> = {}
+  const rootStyles: Record<string, string> = {};
 
   if (theme && theme.colors) {
     Object.keys(theme.colors).forEach((key: string) => {
-      rootStyles[keyToCssVariable(key)] = theme.colors[key]
-    })
+      rootStyles[keyToCssVariable(key)] = theme.colors[key];
+    });
   }
 
   return (
@@ -22,5 +22,5 @@ export default function NJThemeProvider({ children, theme }: INJThemeProviderPro
     >
       {children}
     </div>
-  )
+  );
 }

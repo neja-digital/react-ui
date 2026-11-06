@@ -1,13 +1,13 @@
-import { createRoot } from 'react-dom/client'
-import './app.css'
-import '@neja-digital/css/index.css'
+import { createRoot } from 'react-dom/client';
+import './app.css';
+import '@neja-digital/css/index.css';
 import {
   NJButton, NJCard, NJContactDetails, NJInput, NJNavbar, NJNavbarBrand, NJNavbarLink, NJNavbarLinks, NJNavbarMenu,
   NJNavbarToggle, NJSelect, NJTestimonial, NJTextArea,
-} from './components'
-import NJSystem from './system/NJSystem'
-import type { TNJTheme } from './types/theme'
-import { mapStringListToOptions } from './utils'
+} from './components';
+import NJSystem from './system/NJSystem';
+import type { TNJTheme } from './types/theme';
+import { mapStringListToOptions } from './utils';
 
 const theme: TNJTheme = {
   colors: {
@@ -16,7 +16,7 @@ const theme: TNJTheme = {
     success: '#3a3',
     danger: '#f33',
   },
-}
+};
 
 createRoot(document.getElementById('root')!).render(
   <NJSystem theme={theme}>
@@ -25,7 +25,8 @@ createRoot(document.getElementById('root')!).render(
       <p>Feel free to edit the props' values and see how it affects the elements</p>
     </div>
 
-    <NJNavbar aria-label="Main"
+    <NJNavbar
+      aria-label="Main"
       njVariant="solid"
       njColor="primary"
       njSticky>
@@ -47,7 +48,8 @@ createRoot(document.getElementById('root')!).render(
         <NJButton njVariant="light" njColor="secondary" njBorder="thin">Light</NJButton>
       </div>
 
-      <NJCard njTitle="Card title"
+      <NJCard
+        njTitle="Card title"
         njText="Card text"
         njColor="primary"
         njVariant="light"
@@ -73,4 +75,4 @@ createRoot(document.getElementById('root')!).render(
       </form>
     </div>
   </NJSystem>,
-)
+);

@@ -1,7 +1,7 @@
-import { defineConfig, esmExternalRequirePlugin } from 'vite'
-import react from '@vitejs/plugin-react'
-import dts from 'vite-plugin-dts'
-import { resolve } from 'node:path'
+import { defineConfig, esmExternalRequirePlugin } from 'vite';
+import react from '@vitejs/plugin-react';
+import dts from 'vite-plugin-dts';
+import { resolve } from 'node:path';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -30,4 +30,4 @@ export default defineConfig({
       ],
     },
   },
-})
+});

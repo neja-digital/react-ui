@@ -1,24 +1,24 @@
-import type { TNJTextSectionProps } from '@/types/props/sections/text'
-import classnames from 'classnames'
+import type { TNJTextSectionProps } from '@/types/props/sections/text';
+import classnames from 'classnames';
 
-const DEFAULT_CLASS_NAME = 'nj-text-section'
+const DEFAULT_CLASS_NAME = 'nj-text-section';
 
 export default function NJTextSection1(props: TNJTextSectionProps) {
   if ('children' in props) {
-    const className = classnames(DEFAULT_CLASS_NAME, props.className)
+    const className = classnames(DEFAULT_CLASS_NAME, props.className);
 
     return (
       <section className={className}>
         {props.children}
       </section>
-    )
+    );
   }
 
-  const { className, njTitle, njSubtitle, njContent, njHighlights, njCtaButtons, njDirection, njCtaButtonsPos } = props
+  const { className, njTitle, njSubtitle, njContent, njHighlights, njCtaButtons, njDirection, njCtaButtonsPos } = props;
 
-  const directionClass: string = njDirection ? `direction-${njDirection}` : ''
+  const directionClass: string = njDirection ? `direction-${njDirection}` : '';
   
-  const sectionClassname = classnames(DEFAULT_CLASS_NAME, className, directionClass)
+  const sectionClassname = classnames(DEFAULT_CLASS_NAME, className, directionClass);
 
   return (
     <section className={sectionClassname}>
@@ -57,5 +57,5 @@ export default function NJTextSection1(props: TNJTextSectionProps) {
         }
       </div>
     </section>
-  )
+  );
 }
