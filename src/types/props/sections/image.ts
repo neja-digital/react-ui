@@ -1,6 +1,6 @@
-import type { INJComponentSlot, INJImageProps } from '../shared'
+import type { INJComponentSlot, INJImageProps } from '../shared';
 
-export type TNJImageSectionImagePositionProp = 'left' | 'right'
+export type TNJImageSectionImagePositionProp = 'left' | 'right';
 
 export interface INJImageSectionProps {
   className?: string
@@ -10,4 +10,4 @@ export interface INJImageSectionProps {
   njContent: React.ReactNode
 }
 
-export type TNJImageSectionProps = INJComponentSlot | INJImageSectionProps
+export type TNJImageSectionProps = INJComponentSlot | INJImageSectionProps;

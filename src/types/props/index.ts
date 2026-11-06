@@ -1,16 +1,16 @@
-export * from './components/button'
-export * from './components/card'
-export * from './components/input'
-export * from './components/navbar'
-export * from './components/select'
-export * from './components/testimonial'
-export * from './components/textarea'
+export * from './components/button';
+export * from './components/card';
+export * from './components/input';
+export * from './components/navbar';
+export * from './components/select';
+export * from './components/testimonial';
+export * from './components/textarea';
 
-export * from './components/contact'
+export * from './components/contact';
 
-export * from './sections/featured'
-export * from './sections/full-section'
-export * from './sections/hero'
-export * from './sections/image'
+export * from './sections/featured';
+export * from './sections/full-section';
+export * from './sections/hero';
+export * from './sections/image';
 
-export * from './shared'
+export * from './shared';

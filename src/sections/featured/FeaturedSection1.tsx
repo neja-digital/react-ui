@@ -1,12 +1,12 @@
-import { NJCard } from '@/components'
-import type { TNJFeaturedProps } from '@/types'
-import classnames from 'classnames'
+import { NJCard } from '@/components';
+import type { TNJFeaturedProps } from '@/types';
+import classnames from 'classnames';
 
-const DEFAULT_CLASS_NAME = 'nj-featured'
+const DEFAULT_CLASS_NAME = 'nj-featured';
 
 export default function NJFeaturedSection1(props: TNJFeaturedProps) {
   if ('children' in props) {
-    const className = classnames(DEFAULT_CLASS_NAME, props.className)
+    const className = classnames(DEFAULT_CLASS_NAME, props.className);
 
     return (
       <section className={className}>
@@ -14,19 +14,19 @@ export default function NJFeaturedSection1(props: TNJFeaturedProps) {
           {props.children}
         </>
       </section>
-    )
+    );
   }
 
-  const { className, njTitle, njFeaturedItems, njCtaButtons } = props
+  const { className, njTitle, njFeaturedItems, njCtaButtons } = props;
 
   const featuredCardsJsx = njFeaturedItems ? njFeaturedItems.map((item, index) => (
     <NJCard
       key={`${index}-${item.njTitle}`}
       { ...item }
     />
-  )) : []
+  )) : [];
 
-  const sectionClassname = classnames(DEFAULT_CLASS_NAME, className)
+  const sectionClassname = classnames(DEFAULT_CLASS_NAME, className);
 
   return (
     <section className={sectionClassname}>
@@ -40,5 +40,5 @@ export default function NJFeaturedSection1(props: TNJFeaturedProps) {
         { njCtaButtons }
       </div>
     </section>
-  )
+  );
 }

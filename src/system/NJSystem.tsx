@@ -1,6 +1,6 @@
-import '@neja-digital/css/index.css'
-import NJThemeProvider from '../ThemeProvider'
-import type { TNJTheme } from '../types/theme'
+import '@neja-digital/css/index.css';
+import NJThemeProvider from '../ThemeProvider';
+import type { TNJTheme } from '../types/theme';
 
 export interface INJSystemProps {
   children: React.ReactNode
@@ -12,5 +12,5 @@ export default function NJSystem({ children, theme }: INJSystemProps) {
     <NJThemeProvider theme={theme}>
       {children}
     </NJThemeProvider>
-  )
+  );
 }

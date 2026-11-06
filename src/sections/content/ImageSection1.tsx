@@ -1,23 +1,23 @@
-import type { TNJImageSectionProps } from '@/types'
-import classnames from 'classnames'
+import type { TNJImageSectionProps } from '@/types';
+import classnames from 'classnames';
 
-const DEFAULT_CLASS_NAME = 'nj-image-section'
+const DEFAULT_CLASS_NAME = 'nj-image-section';
 
 export default function NJImageSection1(props: TNJImageSectionProps) {
   if ('children' in props) {
-    const className = classnames(DEFAULT_CLASS_NAME, props.className)
+    const className = classnames(DEFAULT_CLASS_NAME, props.className);
 
     return (
       <section className={className}>
         {props.children}
       </section>
-    )
+    );
   }
 
-  const { className, njImgData, njImgPos, njTitle, njContent } = props
+  const { className, njImgData, njImgPos, njTitle, njContent } = props;
 
-  const imgPosClass = njImgPos ? `image-${njImgPos}` : ''
-  const sectionClassname = classnames(DEFAULT_CLASS_NAME, className, imgPosClass)
+  const imgPosClass = njImgPos ? `image-${njImgPos}` : '';
+  const sectionClassname = classnames(DEFAULT_CLASS_NAME, className, imgPosClass);
 
   return (
     <section className={sectionClassname}>
@@ -33,5 +33,5 @@ export default function NJImageSection1(props: TNJImageSectionProps) {
         <img { ...njImgData } />
       </div>
     </section>
-  )
+  );
 }

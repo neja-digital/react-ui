@@ -1,4 +1,4 @@
-import type { INJProps } from '../shared'
+import type { INJProps } from '../shared';
 
 export interface INJTestimonialProps extends INJProps {
   njAuthor: string
@@ -6,4 +6,4 @@ export interface INJTestimonialProps extends INJProps {
   njRating: number
 }
 
-export type TNJTestimonialProps = INJTestimonialProps
+export type TNJTestimonialProps = INJTestimonialProps;

@@ -1,5 +1,5 @@
-import type { InputHTMLAttributes } from 'react'
-import type { INJProps } from '../shared'
+import type { InputHTMLAttributes } from 'react';
+import type { INJProps } from '../shared';
 
 export interface INJInputProps extends InputHTMLAttributes<HTMLInputElement>, INJProps {
   njColor?: string
@@ -7,4 +7,4 @@ export interface INJInputProps extends InputHTMLAttributes<HTMLInputElement>, IN
   id?: string
 }
 
-export type TNJInputProps = INJInputProps
+export type TNJInputProps = INJInputProps;

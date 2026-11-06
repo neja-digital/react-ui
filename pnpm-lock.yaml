@@ -18,21 +18,18 @@ importers:
       '@babel/core':
         specifier: ^7.29.0
         version: 7.29.7
-      '@eslint/js':
-        specifier: ^10.0.1
-        version: 10.0.1(eslint@10.14.0)
       '@microsoft/api-extractor':
         specifier: ^7.58.8
         version: 7.60.1(@types/node@24.19.2)
+      '@neja-digital/config':
+        specifier: ^0.1.0
+        version: 0.1.0(eslint@10.14.0)(typescript@6.0.3)
       '@neja-digital/css':
         specifier: ^0.6.0
         version: 0.6.0
       '@rolldown/plugin-babel':
         specifier: ^0.2.3
         version: 0.2.4(@babel/core@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@24.19.2))
-      '@stylistic/eslint-plugin':
-        specifier: ^5.10.0
-        version: 5.10.0(eslint@10.14.0)
       '@types/babel__core':
         specifier: ^7.20.5
         version: 7.20.5
@@ -54,15 +51,6 @@ importers:
       eslint:
         specifier: ^10.3.0
         version: 10.14.0
-      eslint-plugin-react-hooks:
-        specifier: ^7.1.1
-        version: 7.1.1(eslint@10.14.0)
-      eslint-plugin-react-refresh:
-        specifier: ^0.5.2
-        version: 0.5.7(eslint@10.14.0)
-      globals:
-        specifier: ^17.6.0
-        version: 17.14.0
       react:
         specifier: ^19.2.6
         version: 19.3.1
@@ -72,9 +60,6 @@ importers:
       typescript:
         specifier: ~6.0.2
         version: 6.0.3
-      typescript-eslint:
-        specifier: ^8.59.2
-        version: 8.72.1(eslint@10.14.0)(typescript@6.0.3)
       vite:
         specifier: ^8.0.16
         version: 8.3.5(@types/node@24.19.2)
@@ -255,6 +240,12 @@ packages:
 
   '@microsoft/tsdoc@0.17.1':
     resolution: {integrity: sha512-VHyYyyoH63jFoO3shpw9Zfijk5v/9p/VrClW35z0/q6ooK7sSmxpzOkS4iZPxs3vO4XtBW4H38HRAKkAMIK7DA==}
+
+  '@neja-digital/config@0.1.0':
+    resolution: {integrity: sha512-5dQq8GvhBxbZlC/5bojLbpRbvcQG2xtyTO27xP3LJtH+xJqtc3k15eAgdP29dalmIwMPAD0z/qwcsX+TZFmISg==, tarball: https://npm.pkg.github.com/download/@neja-digital/config/0.1.0/7d842c197a7a1b7b495aeb0e8884d30faf77c2f7}
+    peerDependencies:
+      eslint: ^10.0.0
+      typescript: '>=5.9.0'
 
   '@neja-digital/css@0.6.0':
     resolution: {integrity: sha512-kW4dbgmkrWB5ZN0BUtIfvudlUH7dW0FGQcw6/8SA5IDz3SP/RGLz/Ywb6NS1fnMWMqnk3/mAQaslt6nXjbePJg==, tarball: https://npm.pkg.github.com/download/@neja-digital/css/0.6.0/972e68abfdd9143ad90ce9022aa0ca87ebe4dbb3}
@@ -1120,11 +1111,6 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  semver@7.8.6:
-    resolution: {integrity: sha512-9lpSSU4Mly3mrtruwLs1eLK6+gzbzqeBFwRNjIjE+9LuDpWdYctrQlQ3ej1Ilgi7gknpsTRnPoLP8DpCHqHIJw==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
     engines: {node: '>=8'}
@@ -1562,6 +1548,19 @@ snapshots:
 
   '@microsoft/tsdoc@0.17.1': {}
 
+  '@neja-digital/config@0.1.0(eslint@10.14.0)(typescript@6.0.3)':
+    dependencies:
+      '@eslint/js': 10.0.1(eslint@10.14.0)
+      '@stylistic/eslint-plugin': 5.10.0(eslint@10.14.0)
+      eslint: 10.14.0
+      eslint-plugin-react-hooks: 7.1.1(eslint@10.14.0)
+      eslint-plugin-react-refresh: 0.5.7(eslint@10.14.0)
+      globals: 17.14.0
+      typescript: 6.0.3
+      typescript-eslint: 8.72.1(eslint@10.14.0)(typescript@6.0.3)
+    transitivePeerDependencies:
+      - supports-color
+
   '@neja-digital/css@0.6.0': {}
 
   '@oxc-project/types@0.156.0': {}
@@ -1785,7 +1784,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.72.1
       debug: 4.4.3
       minimatch: 10.2.6
-      semver: 7.8.6
+      semver: 7.7.4
       tinyglobby: 0.2.17
       ts-api-utils: 2.5.0(typescript@6.0.3)
       typescript: 6.0.3
@@ -2354,8 +2353,6 @@ snapshots:
   semver@6.3.2: {}
 
   semver@7.7.4: {}
-
-  semver@7.8.6: {}
 
   shebang-command@2.0.0:
     dependencies:

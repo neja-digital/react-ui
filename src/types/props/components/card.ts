@@ -1,4 +1,4 @@
-import type { INJComponentSlot, INJImageProps, INJProps, TNJRaisedProp } from '../shared'
+import type { INJComponentSlot, INJImageProps, INJProps, TNJRaisedProp } from '../shared';
 
 export interface INJCardProps extends INJProps {
   njImgData?: INJImageProps
@@ -14,4 +14,4 @@ export interface INJCardComponentSlot extends INJComponentSlot {
   njImgData?: INJImageProps
 }
 
-export type TNJCardProps = INJCardComponentSlot | INJCardProps
+export type TNJCardProps = INJCardComponentSlot | INJCardProps;

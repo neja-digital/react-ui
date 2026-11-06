@@ -1,5 +1,5 @@
-import type { TextareaHTMLAttributes } from 'react'
-import type { INJProps, TNJResizeProp } from '../shared'
+import type { TextareaHTMLAttributes } from 'react';
+import type { INJProps, TNJResizeProp } from '../shared';
 
 export interface INJTextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement>, INJProps {
   njResize?: TNJResizeProp
@@ -8,4 +8,4 @@ export interface INJTextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaEle
   id?: string
 }
 
-export type TNJTextAreaProps = INJTextAreaProps
+export type TNJTextAreaProps = INJTextAreaProps;

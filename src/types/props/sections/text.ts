@@ -1,7 +1,7 @@
-import type { INJComponentSlot } from '../shared'
+import type { INJComponentSlot } from '../shared';
 
-export type TNJCtaButtonsPos = 'first' | 'second'
-export type TNJTextSectionDirectionProp = 'normal' | 'reverse'
+export type TNJCtaButtonsPos = 'first' | 'second';
+export type TNJTextSectionDirectionProp = 'normal' | 'reverse';
 
 export interface INJTextSectionProps {
   className?: string
@@ -14,4 +14,4 @@ export interface INJTextSectionProps {
   njCtaButtonsPos?: TNJCtaButtonsPos
 }
 
-export type TNJTextSectionProps = INJComponentSlot | INJTextSectionProps
+export type TNJTextSectionProps = INJComponentSlot | INJTextSectionProps;
