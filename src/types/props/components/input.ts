@@ -1,8 +1,9 @@
+import type { TNJColor } from '../../theme';
 import type { InputHTMLAttributes } from 'react';
 import type { INJProps } from '../shared';
 
 export interface INJInputProps extends InputHTMLAttributes<HTMLInputElement>, INJProps {
-  njColor?: string
+  njColor?: TNJColor
   njLabel?: string
   id?: string
 }

@@ -14,7 +14,7 @@ export default function NJButton(props: TNJButtonProps) {
   );
 
   return (
-    <button className={classList} style={getColorStyle('--button-color', njColor, style)} {...rest}>
+    <button className={classList} style={getColorStyle('--button-color', njColor, style, { onColor: true })} {...rest}>
       {children}
     </button>);
 }

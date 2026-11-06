@@ -45,7 +45,9 @@ export default function NJNavbar(props: TNJNavbarProps) {
   );
 
   // Only set the color variable when a color is given, so the CSS default stays in charge otherwise
-  const colorStyle = njColor ? { '--navbar-color': `var(--${njColor})` } as React.CSSProperties : undefined;
+  const colorStyle = njColor ?
+    { '--navbar-color': `var(--${njColor})`, '--navbar-on-color': `var(--on-${njColor})` } as React.CSSProperties :
+    undefined;
 
   return (
     <NavbarContext value={{ open, setOpen, menuId, toggleRef }}>
