@@ -1,10 +1,11 @@
+import type { TNJColor } from '../../theme';
 import type { ComponentPropsWithRef, ElementType } from 'react';
 import type { INJProps, TNJPolymorphicProps, TNJRaisedProp } from '../shared';
 
 export type TNJNavbarAlignProp = 'start' | 'center' | 'end';
 
 export interface INJNavbarProps extends Omit<ComponentPropsWithRef<'nav'>, 'color'>, INJProps {
-  njColor?: string
+  njColor?: TNJColor
   njRaised?: TNJRaisedProp
   // Keeps the navbar at the top of the viewport while scrolling
   njSticky?: boolean

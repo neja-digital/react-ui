@@ -1,9 +1,10 @@
+import type { TNJColor } from '../../theme';
 import type { TextareaHTMLAttributes } from 'react';
 import type { INJProps, TNJResizeProp } from '../shared';
 
 export interface INJTextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement>, INJProps {
   njResize?: TNJResizeProp
-  njColor?: string
+  njColor?: TNJColor
   njLabel?: string
   id?: string
 }

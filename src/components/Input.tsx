@@ -26,7 +26,7 @@ export default function NJInput(props: TNJInputProps) {
       <input
         id={inputId}
         className={classList}
-        style={getColorStyle('--input-color', njColor, style)}
+        style={getColorStyle('--input-color', njColor, style, { onColor: true })}
         {...rest} />
     </div>
   );

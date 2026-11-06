@@ -42,7 +42,7 @@ export default function NJTextArea(props: TNJTextAreaProps) {
       <textarea
         id={textAreaId}
         className={classList}
-        style={getColorStyle('--textarea-color', njColor, style)}
+        style={getColorStyle('--textarea-color', njColor, style, { onColor: true })}
         {...rest}
       />
     </div>

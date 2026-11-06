@@ -8,9 +8,10 @@ export default function NJFullSection(props: TNJFullSectionProps) {
 
   const classList = classnames(DEFAULT_CLASS_NAME, className);
 
-  const sectionStyle: Record< string, string> = {
-    '--section-background-color': njBackground ? `var(--${njBackground})` : 'transparent',
-  };
+  // Only set when given, so the CSS default (transparent) stays in charge otherwise
+  const sectionStyle: Record<string, string> = njBackground ?
+    { '--section-background-color': `var(--${njBackground})` } :
+    {};
 
   return (
     <div id={id} className={classList} style={sectionStyle as React.CSSProperties}>

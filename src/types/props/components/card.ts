@@ -1,3 +1,4 @@
+import type { TNJColor } from '../../theme';
 import type { INJComponentSlot, INJImageProps, INJProps, TNJRaisedProp } from '../shared';
 
 export interface INJCardProps extends INJProps {
@@ -6,7 +7,7 @@ export interface INJCardProps extends INJProps {
   njText?: string
   njContent?: React.ReactNode
   njCtaButtons?: React.ReactNode
-  njColor?: string
+  njColor?: TNJColor
   njRaised?: TNJRaisedProp
 }
 

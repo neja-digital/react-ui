@@ -14,7 +14,7 @@ export default function NJSelect(props: TNJSelectProps) {
   );
 
   return (
-    <select className={classList} style={getColorStyle('--select-color', njColor, style)} {...rest}>
+    <select className={classList} style={getColorStyle('--select-color', njColor, style, { onColor: true })} {...rest}>
       {children}
     </select>
   );

@@ -25,8 +25,8 @@ importers:
         specifier: ^0.1.0
         version: 0.1.0(eslint@10.14.0)(typescript@6.0.3)
       '@neja-digital/css':
-        specifier: ^0.6.0
-        version: 0.6.0
+        specifier: ^0.7.0
+        version: 0.7.0
       '@rolldown/plugin-babel':
         specifier: ^0.2.3
         version: 0.2.4(@babel/core@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@24.19.2))
@@ -247,8 +247,8 @@ packages:
       eslint: ^10.0.0
       typescript: '>=5.9.0'
 
-  '@neja-digital/css@0.6.0':
-    resolution: {integrity: sha512-kW4dbgmkrWB5ZN0BUtIfvudlUH7dW0FGQcw6/8SA5IDz3SP/RGLz/Ywb6NS1fnMWMqnk3/mAQaslt6nXjbePJg==, tarball: https://npm.pkg.github.com/download/@neja-digital/css/0.6.0/972e68abfdd9143ad90ce9022aa0ca87ebe4dbb3}
+  '@neja-digital/css@0.7.0':
+    resolution: {integrity: sha512-frIfkBal4+qJeEmgD+OTRYshQgpfPA7YjtM0eUf9e7mUJ2Yo6E0qfThHW3sGtAo7hhPq85NRUenJuMUY2nYjOA==, tarball: https://npm.pkg.github.com/download/@neja-digital/css/0.7.0/6e7fde5fb75ad4e819ff13709892e5ed39ad00a1}
 
   '@oxc-project/types@0.156.0':
     resolution: {integrity: sha512-1Duyg48TdJNdyhEB8Xn1L36bT9Pv6GUtlKjHxOys8xkaF/rQq3XJE+bAurSK/AgIz5mGFsb77cn9Pb20+WCScw==}
@@ -1561,7 +1561,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@neja-digital/css@0.6.0': {}
+  '@neja-digital/css@0.7.0': {}
 
   '@oxc-project/types@0.156.0': {}
 

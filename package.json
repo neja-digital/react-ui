@@ -1,6 +1,6 @@
 {
   "name": "@neja-digital/react-ui",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -46,7 +46,7 @@
     "@babel/core": "^7.29.0",
     "@microsoft/api-extractor": "^7.58.8",
     "@neja-digital/config": "^0.1.0",
-    "@neja-digital/css": "^0.6.0",
+    "@neja-digital/css": "^0.7.0",
     "@rolldown/plugin-babel": "^0.2.3",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^24.12.3",
